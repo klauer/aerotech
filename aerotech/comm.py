@@ -124,18 +124,13 @@ class EnsembleDoCommand(EnsembleComm):
                 await asyncio.sleep(0.01)
 
     async def read_drive_info(self):
-        # TODO first read doesn't always contain the data?
-        drive = 0
-        await self.write_command(Commands.drive_info, int_args=[drive])
-        while not drive:
-            drive = await self.iglobal_get(Variables.int_arg1)
-            if drive:
-                try:
-                    return Drives(drive)
-                except TypeError:
-                    logger.error('Unknown drive type: %d', drive)
-                    return drive
-            await self.write_command(Commands.drive_info, int_args=[drive])
+        await self.write_command(Commands.drive_info)
+        drive = await self.iglobal_get(Variables.int_arg1)
+        try:
+            return Drives(drive)
+        except TypeError:
+            logger.error('Unknown drive type: %d', drive)
+            return drive
 
     async def scope_start(self, data_points, period_ms):
         await self.scope_stop()
