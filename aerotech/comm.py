@@ -159,13 +159,12 @@ class EnsembleDoCommand(EnsembleComm):
                 ...
         return info
 
-    async def scope_wait(self):
+    async def scope_wait(self, *, poll_period=0.1):
         while True:
             full_status = await self.get_friendly_scope_status()
-            print('scope status is', full_status)
-            await asyncio.sleep(0.5)
             if DataCollectionMask.done in full_status:
                 break
+            await asyncio.sleep(poll_period)
 
     async def get_scope_data(self, data_points, data_key: ScopeData):
         await self.scope_wait()
