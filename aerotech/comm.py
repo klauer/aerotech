@@ -13,9 +13,70 @@ from .exceptions import (FailureResponseException, FaultResponseException,
 logger = logging.getLogger(__name__)
 
 
-class EnsembleComm:
+class EnsembleGlobal:
+    def __init__(self, comm, index, *, check=False):
+        self._comm = comm
+        self._index = index
+        self.check = check
+
+    async def get(self):
+        '''Get the value of the global variable'''
+        ...
+
+    async def set(self, value, *, check=None):
+        '''Set the value of the global variable'''
+        ...
+
+    @property
+    def index(self):
+        '''Global variable index'''
+        return self._index
+
+    def __repr__(self):
+        return '{}(index={})'.format(type(self).__name__, self._index)
+
+
+class EnsembleGlobalInt(EnsembleGlobal):
+    '''Ensemble IGLOBAL'''
+    async def get(self):
+        data = await self._comm.write_read('IGLOBAL({})'.format(self._index))
+        return int(data)
+
+    async def set(self, value: int, *, check=None):
+        if check is None:
+            check = self.check
+
+        value = int(value)
+        await self._comm.write_read('IGLOBAL({}) = {}'.format(self._index, value))
+        if self.check:
+            read_value = await self.get()
+            if read_value != value:
+                raise WriteFailureException(value, read_value)
+            return read_value
+
+
+class EnsembleGlobalDouble(EnsembleGlobal):
+    '''Ensemble DGLOBAL'''
     float_tolerance = 0.0001
 
+    async def get(self):
+        data = await self._comm.write_read('DGLOBAL({})'.format(self._index))
+        return float(data)
+
+    async def dglobal_set(self, value: float, *, check=None):
+        if check is None:
+            check = self.check
+
+        value = float(value)
+        await self._comm.write_read('DGLOBAL({}) = {}'.format(self._index, value))
+        if check:
+            read_value = await self.get()
+            if abs(read_value - value) > self.float_tolerance:
+                raise WriteFailureException(value, read_value)
+            return read_value
+
+
+class EnsembleComm:
     def __init__(self, host, port, *, loop=None):
         self.host = host
         self.port = int(port)
@@ -25,6 +86,8 @@ class EnsembleComm:
         self.loop = loop
         self._reader = None
         self._writer = None
+        self._dglobals = {}
+        self._iglobals = {}
 
     async def _open_connection(self):
         if self._reader is not None:
@@ -60,45 +123,44 @@ class EnsembleComm:
 
         raise UnknownResponseException(code, response)
 
-    async def iglobal_get(self, num):
-        data = await self.write_read('IGLOBAL({})'.format(num))
-        return int(data)
+    def iglobal(self, num) -> EnsembleGlobalInt:
+        '''Get an EnsembleGlobalInt instance corresponding to an index'''
+        try:
+            return self._iglobals[num]
+        except KeyError:
+            var = EnsembleGlobalInt(self, num)
+            self._iglobals[num] = var
+            return var
 
-    async def iglobal_set(self, num, value: int, *, check=False):
-        value = int(value)
-        await self.write_read('IGLOBAL({}) = {}'.format(num, value))
-        if check:
-            read_value = await self.iglobal_get(num)
-            if read_value != value:
-                raise WriteFailureException(value, read_value)
-            return read_value
-
-    async def dglobal_get(self, num):
-        data = await self.write_read('DGLOBAL({})'.format(num))
-        return float(data)
-
-    async def dglobal_set(self, num, value: float, *, check=False):
-        value = float(value)
-        await self.write_read('DGLOBAL({}) = {}'.format(num, value))
-        if check:
-            read_value = await self.dglobal_get(num)
-            if abs(read_value - value) > self.float_tolerance:
-                raise WriteFailureException(value, read_value)
-            return read_value
+    def dglobal(self, num) -> EnsembleGlobalDouble:
+        '''Get an EnsembleGlobalDouble instance corresponding to an index'''
+        try:
+            return self._dglobals[num]
+        except KeyError:
+            var = EnsembleGlobalDouble(self, num)
+            self._dglobals[num] = var
+            return var
 
 
 class EnsembleDoCommand(EnsembleComm):
     '''Ensemble running script doCommand.ab/bcx as task #1'''
 
-    _int_vars = [Variables.int_arg1, Variables.int_arg2, Variables.int_arg3,
+    _int_nums = [Variables.int_arg1, Variables.int_arg2, Variables.int_arg3,
                  Variables.int_arg4,
                  ]
-    _double_vars = [Variables.double_arg1, Variables.double_arg2,
+    _double_nums = [Variables.double_arg1, Variables.double_arg2,
                     Variables.double_arg3, Variables.double_arg4,
                     Variables.double_arg5, Variables.double_arg6,
                     Variables.double_arg7, Variables.double_arg8,
                     Variables.double_arg9,
                     ]
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self._int_args = [EnsembleGlobalInt(self, idx)
+                          for idx in self._int_nums]
+        self._double_args = [EnsembleGlobalDouble(self, idx)
+                             for idx in self._double_nums]
 
     async def check_script_status(self):
         ...
@@ -107,25 +169,26 @@ class EnsembleDoCommand(EnsembleComm):
     async def write_command(self, command: Commands, *, wait=True,
                             int_args=None, double_args=None):
         if int_args is not None:
-            for var, value in zip(self._int_vars, int_args):
-                await self.iglobal_set(var, value)
+            for arg, value in zip(self._int_args, int_args):
+                await arg.set(value)
 
         if double_args is not None:
-            for var, value in zip(self._double_vars, double_args):
-                await self.dglobal_set(var, value)
+            for arg, value in zip(self._double_args, double_args):
+                await arg.set(value)
 
-        await self.iglobal_set(Variables.command, command, check=False)
+        cmd_arg = self.iglobal(Variables.command)
+        await cmd_arg.set(command, check=False)
 
         if wait and command != Commands.do_trajectory:
             while True:
-                value = await self.iglobal_get(Variables.command)
+                value = await cmd_arg.get()
                 if value == -command:
                     break
                 await asyncio.sleep(0.01)
 
     async def read_drive_info(self):
         await self.write_command(Commands.drive_info)
-        drive = await self.iglobal_get(Variables.int_arg1)
+        drive = await self._int_args[0].get()
         try:
             return Drives(drive)
         except TypeError:
@@ -147,7 +210,7 @@ class EnsembleDoCommand(EnsembleComm):
 
     async def get_scope_status(self):
         await self.write_command(Commands.scope_status)
-        return await self.iglobal_get(Variables.int_arg1)
+        return await self._int_args[0].get()
 
     async def get_friendly_scope_status(self):
         status = await self.get_scope_status()
@@ -174,12 +237,12 @@ class EnsembleDoCommand(EnsembleComm):
                                  int_args=[data_key, 0],
                                  double_args=[0.0])
 
-        data_key_var, data_point_var = self._int_vars[:2]
-        data_var = self._double_vars[0]
+        data_key_var, data_point_var = self._int_args[:2]
+        data_arg = self._double_args[0]
         for i in range(data_points):
-            await self.iglobal_set(data_point_var, i)
+            await data_point_var.set(i)
             await self.write_command(Commands.scope_data)
-            data.append(await self.dglobal_get(data_var))
+            data.append(await data_arg.get())
         return data
 
 
@@ -187,7 +250,7 @@ def main(host, port):
     async def main_test():
         # comm = EnsembleComm(host, port)
         comm = EnsembleDoCommand(host, port)
-        # data = await comm.write_read('AXISSTATUS(@0)')
+        data = await comm.write_read('AXISSTATUS(@0)')
         value = await comm.read_drive_info()
         print('drive info {!r}'.format(value))
         data_points = 100
