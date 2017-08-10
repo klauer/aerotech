@@ -244,27 +244,3 @@ class EnsembleDoCommand(EnsembleComm):
             await self.write_command(Commands.scope_data)
             data.append(await data_arg.get())
         return data
-
-
-def main(host, port):
-    async def main_test():
-        # comm = EnsembleComm(host, port)
-        comm = EnsembleDoCommand(host, port)
-        data = await comm.write_read('AXISSTATUS(@0)')
-        value = await comm.read_drive_info()
-        print('drive info {!r}'.format(value))
-        data_points = 100
-        # value = await comm.scope_start(data_points=data_points, period_ms=100)
-        data = await comm.get_scope_data(data_points, ScopeData.program_counter)
-        # data = await comm.get_scope_data(data_points, ScopeData.position_feedback)
-        print('data', data)
-
-    loop = asyncio.get_event_loop()
-    loop.run_until_complete(main_test())
-    loop.close()
-
-
-if __name__ == '__main__':
-    logging.basicConfig()
-    logger.setLevel(logging.DEBUG)
-    main(host='moc-b34-mc02.slac.stanford.edu', port=8000)
