@@ -28,5 +28,5 @@ if __name__ == '__main__':
     aerotech.logger.setLevel(logging.DEBUG)
 
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(test(host, port))
+    loop.run_until_complete(test(host, port=8000))
     loop.close()
