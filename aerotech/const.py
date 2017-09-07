@@ -93,6 +93,16 @@ class ScopeData(IntEnum):
     program_counter = 17
 
 
+class TaskState(IntEnum):
+    unknown = 0
+    idle = 1
+    ready = 2
+    running = 3
+    paused = 4
+    done = 5
+    errored = 6
+
+
 EOS_CHAR = '\n'
 ACK_CHAR = '%'
 NAK_CHAR = '!'

@@ -3,7 +3,7 @@ import asyncio
 
 from .const import (EOS_CHAR, ACK_CHAR, NAK_CHAR, FAULT_CHAR, TIMEOUT_CHAR,
                     Drives, Variables, Commands, ScopeData,
-                    DataCollectionMask)
+                    DataCollectionMask, TaskState)
 from .exceptions import (FailureResponseException, FaultResponseException,
                          TimeoutResponseException, UnknownResponseException,
                          WriteFailureException,
@@ -141,9 +141,48 @@ class EnsembleComm:
             self._dglobals[num] = var
             return var
 
+    async def get_task_state(self, task_number):
+        '''Get the TaskState of a specific task number'''
+        task_state = await self.write_read('TASKSTATE({})'.format(task_number))
+        return TaskState(int(task_state))
+
+    async def run_program(self, task_number, program_name):
+        '''Run a program on a specific task number'''
+        logger.debug('Running %r on task %s', program_name, task_number)
+        await self.write_read('PROGRAM RUN {}, "{}"'
+                              ''.format(task_number, program_name))
+
+    async def stop_task(self, task_number):
+        '''Stop a specific task'''
+        logger.debug('Stopping task %s', task_number)
+        await self.write_read('PROGRAM STOP {}'.format(task_number))
+
+    async def ensure_task(self, task_number, program_name):
+        '''Ensure a program is running on a specific task number
+
+        If the task is already running, this will be a no-operation.
+        If the task has errored, it will first be stopped.
+        There is no check to see if the correct program is running.
+        '''
+        state = await self.get_task_state(task_number)
+        if state in (TaskState.running, ):
+            # Task is already running
+            pass
+        elif state in (TaskState.idle, TaskState.ready, TaskState.paused,
+                       TaskState.done, TaskState.errored):
+            if state == TaskState.errored:
+                logger.debug('Task %s has errored; stopping it', task_number)
+                await self.stop_task(task_number)
+                await asyncio.sleep(0.1)
+
+            await self.run_program(task_number, program_name)
+
 
 class EnsembleDoCommand(EnsembleComm):
     '''Ensemble running script doCommand.ab/bcx as task #1'''
+
+    task_number = 1
+    program_name = 'doCommand.bcx'
 
     _int_nums = [Variables.int_arg1, Variables.int_arg2, Variables.int_arg3,
                  Variables.int_arg4,
@@ -162,9 +201,9 @@ class EnsembleDoCommand(EnsembleComm):
         self._double_args = [EnsembleGlobalDouble(self, idx)
                              for idx in self._double_nums]
 
-    async def check_script_status(self):
-        ...
-        # start doCommand.bcx if not already running
+    async def check_program_status(self):
+        '''Start doCommand.bcx if not already running'''
+        await self.ensure_task(self.task_number, self.program_name)
 
     async def write_command(self, command: Commands, *, wait=True,
                             int_args=None, double_args=None):
