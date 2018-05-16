@@ -26,6 +26,7 @@ HEADER
 	DEFINE cmdDATAACQ_OFF		23
 	DEFINE cmdDATAACQ_READ		24
 	DEFINE cmdDOTRAJECTORY		25
+	DEFINE cmdFAST_SCOPEDATA    26
 
 	DEFINE cmdVar	45
 	DEFINE iarg1Var	46
@@ -171,6 +172,30 @@ PROGRAM
 			else
 				DGLOBAL(darg1Var) = -1.2345654321
 			end if
+		ELSEIF command = cmdFAST_SCOPEDATA THEN
+            ' iarg holds the type to read
+			iarg = IGLOBAL(iarg1Var)
+            ' iarg2Var holds start index
+            ' iarg3Var holds the number of points to read
+            numpoints = IGLOBAL(iarg3Var)
+
+			FOR i = 0 to numpoints - 1 STEP 1
+                if iarg = sd_PositionCommand then
+                    pos = SCOPEDATA(PositionCommand, IGLOBAL(iarg2Var))
+                elseif iarg = sd_PositionFeedback then
+                    pos = SCOPEDATA(PositionFeedback, IGLOBAL(iarg2Var))
+                elseif iarg = sd_CurrentFeedback then
+                    pos = SCOPEDATA(CurrentFeedback, IGLOBAL(iarg2Var))
+                elseif iarg = sd_ProgramCounter  then
+                    pos = SCOPEDATA(ProgramCounter, IGLOBAL(iarg2Var))
+                else
+                    pos = -1.2345654321
+                end if
+                DGLOBAL(darg1Var + i) = pos
+                numpoints = numpoints - 1
+                ' Automatically go to the next index
+                IGLOBAL(iarg2Var) = IGLOBAL(iarg2Var) + 1
+            NEXT i
 		ELSEIF command = cmdSCOPESTATUS THEN
 			IGLOBAL(iarg1Var) = SCOPESTATUS(IGLOBAL(iarg1Var))
 		ELSEIF command = cmdSCOPETRIG THEN

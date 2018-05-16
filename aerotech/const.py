@@ -44,10 +44,23 @@ class Commands(IntEnum):
     daq_read = 24
     do_trajectory = 25
 
+    # new commands beyond original doCommand.ab:
+    fast_scope_data = 26
+
+
+class ScopeStatusType(IntEnum):  # intmask
+    max_points = 0
+    points_allocated = 1
+    points_collected = 2
+    collection_status = 3
+
 
 class DataCollectionMask(IntEnum):  # intmask
+    allocated = 1 << 0
+    active = 1 << 1
     triggered = 1 << 2
     done = 1 << 3
+    aborted = 1 << 4
     overflow = 1 << 5
     trigger_initiated = 1 << 6
 

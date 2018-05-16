@@ -2,7 +2,7 @@ import logging
 import asyncio
 
 from .const import (EOS_CHAR, ACK_CHAR, NAK_CHAR, FAULT_CHAR, TIMEOUT_CHAR,
-                    Drives, Variables, Commands, ScopeData,
+                    Drives, Variables, Commands, ScopeData, ScopeStatusType,
                     DataCollectionMask, TaskState)
 from .exceptions import (FailureResponseException, FaultResponseException,
                          TimeoutResponseException, UnknownResponseException,
@@ -103,7 +103,7 @@ class EnsembleComm:
         if EOS_CHAR not in line:
             line = ''.join((line, EOS_CHAR))
 
-        logger.debug('Writing %r', line)
+        # logger.debug('Writing %r', line)
         self._writer.write(line.encode('latin-1'))
 
         read = ''
@@ -111,7 +111,8 @@ class EnsembleComm:
             read += (await self._reader.read(1024)).decode('latin-1')
 
         code, response = read[0], read[1:]
-        logger.debug('Read code=%s response=%r', code, response)
+        logger.debug('Wrote: %r Read: code=%s response=%r', line, code,
+                     response)
         if code == ACK_CHAR:
             return response
         elif code == NAK_CHAR:
@@ -223,7 +224,7 @@ class EnsembleDoCommand(EnsembleComm):
                 value = await cmd_arg.get()
                 if value == -command:
                     break
-                await asyncio.sleep(0.01)
+                await asyncio.sleep(0.001)
 
     async def read_drive_info(self):
         await self.write_command(Commands.drive_info)
@@ -242,14 +243,32 @@ class EnsembleDoCommand(EnsembleComm):
                                  int_args=[period_ms])
         await self.write_command(Commands.scope_trigger,
                                  int_args=[0])
+        max_points = await self.get_scope_max_points()
+        allocated = await self.get_scope_points_allocated()
+        collected = await self.get_scope_points_collected()
+        logger.debug('Scope configured with period %d ms / '
+                     'collected %d allocated: %d of max %d',
+                     period_ms, collected, allocated, max_points)
 
     async def scope_stop(self):
         await self.write_command(Commands.scope_trigger,
                                  int_args=[1])
 
-    async def get_scope_status(self):
-        await self.write_command(Commands.scope_status)
+    async def get_scope_status(self, *,
+                               type_=ScopeStatusType.collection_status):
+        await self.write_command(Commands.scope_status, int_args=[type_])
         return await self._int_args[0].get()
+
+    async def get_scope_max_points(self):
+        return await self.get_scope_status(type_=ScopeStatusType.max_points)
+
+    async def get_scope_points_allocated(self):
+        return await self.get_scope_status(
+            type_=ScopeStatusType.points_allocated)
+
+    async def get_scope_points_collected(self):
+        return await self.get_scope_status(
+            type_=ScopeStatusType.points_collected)
 
     async def get_friendly_scope_status(self):
         status = await self.get_scope_status()
@@ -262,24 +281,70 @@ class EnsembleDoCommand(EnsembleComm):
         return info
 
     async def scope_wait(self, *, poll_period=0.1):
+        allocated = await self.get_scope_points_allocated()
         while True:
             full_status = await self.get_friendly_scope_status()
             if DataCollectionMask.done in full_status:
                 break
+            collected = await self.get_scope_points_collected()
+            if DataCollectionMask.aborted in full_status:
+                logger.warning('Data collection aborted; collected %d of %d',
+                               collected, allocated)
+                break
+            elif DataCollectionMask.active not in full_status:
+                logger.warning('Data collection no longer active; '
+                               'collected %d of %d', collected, allocated)
+                break
+
+            logger.debug('Scope collected %d of %d', collected, allocated)
             await asyncio.sleep(poll_period)
 
     async def get_scope_data(self, data_points, data_key: ScopeData):
-        await self.scope_wait()
-        await self.write_command(Commands.scope_data, int_args=[data_key])
+        '''Copy up to data_points of scope data from the ScopeData key
+
+        Note: with the modified doCommand provided in this repository, we can
+        get more data out in parallel and significantly increase the
+        throughput.
+
+        For that, see: fast_get_scope_data
+        '''
         data = []
+
+        # set up the first point to read out
         await self.write_command(Commands.scope_data,
                                  int_args=[data_key, 0],
                                  double_args=[0.0])
 
         data_key_var, data_point_var = self._int_args[:2]
         data_arg = self._double_args[0]
+
+        # then iterate over all to read them (TODO duplicate first point)
         for i in range(data_points):
             await data_point_var.set(i)
             await self.write_command(Commands.scope_data)
             data.append(await data_arg.get())
+        return data
+
+    async def fast_get_scope_data(self, data_points, data_key: ScopeData):
+        data = []
+
+        # set up the first point to read out
+        # args (scope_data_key, start_index, readout_points_per_command)
+        max_points = len(self._double_args)
+        await self.write_command(
+            Commands.fast_scope_data,
+            int_args=[data_key, 0, max_points],
+            double_args=[0.0],
+        )
+
+        data_key_var, data_point_var, num_points_var = self._int_args[:3]
+
+        for i in range(0, data_points, max_points):
+            num_to_read = min((max_points, data_points - i))
+            data_args = self._double_args[:num_to_read]
+            await data_point_var.set(i)
+            if num_to_read != max_points:
+                await num_points_var.set(num_to_read)
+            await self.write_command(Commands.fast_scope_data)
+            data.extend([await dvar.get() for dvar in data_args])
         return data
