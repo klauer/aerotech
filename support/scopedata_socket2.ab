@@ -1,0 +1,87 @@
+HEADER
+	DEFINE CommChannel   3   ' Ethernet Socket 3 (8001)
+	DEFINE Chr_R        82   ' ASCII R
+END HEADER
+
+DECLARATIONS
+	
+	GLOBAL DataFormatString AS STRING = "%d %.6f %.6f %.6f %.6f\n"
+	GLOBAL PointsFormatString AS STRING = "READ POINTS %d\n"
+	GLOBAL OutputString AS STRING(96)
+	GLOBAL DataInChar AS INTEGER
+	GLOBAL InputDataLen AS INTEGER
+	GLOBAL ExitComm AS INTEGER = 0
+END DECLARATIONS
+
+PROGRAM
+	
+	OPENCOM CommChannel
+	
+	WRITECOM CommChannel, "SCOPEDATA\n"
+	
+	WHILE ExitComm = 0
+	
+		InputDataLen = READCOMCOUNT(CommChannel)
+		WHILE InputDataLen = 0
+			InputDataLen = READCOMCOUNT(CommChannel)
+		WEND
+	
+		DataInChar = READCOMCHAR(CommChannel)
+	
+		IF DataInChar = Chr_R THEN
+			' R
+			CALL ReadData(CommChannel)
+		ELSEIF DataInChar = 0x0A or DataInChar = 0x0D THEN
+			' CR/LF
+		ELSE
+			WRITECOM CommChannel, "UNKNOWN\n"
+		END IF
+		
+		DataInChar = 0
+			
+	WEND
+	
+	CLOSECOM CommChannel
+
+END PROGRAM
+
+function ReadData(BYVAL Chan as INTEGER)
+	dim pos_cmd as double
+	dim pos_fbk as double
+	dim cur_cmd as double
+	dim cur_fbk as double
+	dim num_points as integer
+	dim j as integer
+	
+	num_points = SCOPESTATUS(2)
+	FORMAT OutputString, PointsFormatString, INTV:num_points
+	WRITECOM Chan, OutputString
+	
+	for j = 0 to num_points
+		pos_cmd = SCOPEDATA(PositionCommand, j)
+		pos_fbk = SCOPEDATA(PositionFeedback, j)
+		cur_cmd = SCOPEDATA(CurrentCommand, j)
+		cur_fbk = SCOPEDATA(CurrentFeedback, j)
+		FORMAT OutputString, DataFormatString, INTV:j, DBLV:pos_cmd, DBLV:pos_fbk, DBLV:cur_cmd, DBLV:cur_fbk
+		WRITECOM Chan, OutputString
+	next j	
+	WRITECOM Chan, "READ DONE\n"
+end function	
+'PositionCommand
+'PositionFeedback
+'ExternalPosition
+'AxisFlt
+'AxisStat
+'AnalogInput0
+'AnalogInput1
+'AnalogOutput0
+'AnalogOutput1
+'DigitalInput0
+'DigitalInput1
+'DigitalOutput0
+'DigitalOutput1
+'CurrentCommand
+'CurrentFeedback
+'OptionalData1
+'OptionalData2
+'ProgramCounter
