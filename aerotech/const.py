@@ -1,4 +1,4 @@
-from enum import IntEnum
+from enum import IntEnum, IntFlag
 
 
 class Drives(IntEnum):
@@ -114,6 +114,102 @@ class TaskState(IntEnum):
     paused = 4
     done = 5
     errored = 6
+
+
+class AxisStatus(IntFlag):
+    # Enabled: The axis is enabled.
+    Enabled = 2 ** 0
+    # Homed: The axis is homed.
+    Homed = 2 ** 1
+    # In Position: The axis is considered to be in position as configured
+    # by the InPositionDistance and InPositionTime parameters.
+    InPosition = 2 ** 2
+    # Move Active: The axis is performing drive generated motion.
+    MoveActive = 2 ** 3
+    # Acceleration Phase: The axis is accelerating.
+    AccelPhase = 2 ** 4
+    # Deceleration Phase: The axis is decelerating.
+    DecelPhase = 2 ** 5
+    # Position Capture Active: Position capture is armed on the axis and
+    # waiting for a trigger signal.
+    PositionCapture = 2 ** 6
+    # Current Clamp: For piezo drives, the controller clamps the motor
+    # output to the value of the PiezoVoltageClampLow or the
+    # PiezoVoltageClampHigh parameter. For all other drives, the controller
+    # clamps the motor output to the value of the MaxCurrentClamp parameter.
+    CurrentClamp = 2 ** 7
+    # Brake Output Level: This represents the state of the dedicated
+    # brake output.
+    BrakeOutput = 2 ** 8
+    # Motion Direction (1 = CW): Indicates the direction of the active (or
+    # last) motion.
+    MotionIsCw = 2 ** 9
+    # Gearing or camming active: Gearing or camming is currently active on the
+    # axis.
+    MasterSlaveControl = 2 ** 10
+    # Calibration Active: The correction table for this axis is currently
+    # being applied.
+    CalActive = 2 ** 11
+    # Calibration Enabled: A calibration file contains a calibration table
+    # that corrects this axis. The state of this bit is not affected by the
+    # CALENABLE or CALDISABLE commands.
+    CalEnabled = 2 ** 12
+    # Joystick Control: The axis is currently performing motion under control
+    # of the JOYSTICK command.
+    JoystickControl = 2 ** 13
+    # Homing: The axis is currently performing motion as part of the home
+    # cycle.
+    Homing = 2 ** 14
+    # Master Motion Suppressed: The axis position lost synchronization with the
+    # master and is ignoring profiled position.
+    MasterSuppress = 2 ** 15
+    # Gantry Mode Active: This gantry is actively part of a gantry pair.
+    GantryActive = 2 ** 16
+    # Gantry Master Active: This axis is a gantry master in a gantry pair.
+    GantryMaster = 2 ** 17
+    # Autofocus Active: This axis is operating under control of the AUTOFOCUS
+    # loop.
+    AutofocusActive = 2 ** 18
+    # Command Shaping Filter Done: The filter defined by the Command
+    # Shaping Parameters is complete.
+    CommandFilterDone = 2 ** 19
+    # In Position 2: The axis is considered to be in position as configured
+    # by the InPosition2Distance and InPosition2Time parameters.
+    InPosition2 = 2 ** 20
+    # Servo Control: The axis is operating under servo control.
+    ServoControl = 2 ** 21
+    # CW End Of Travel Limit Input Level: This represents the state of
+    # the CW end of travel limit input. It is not affected by the active
+    # polarity, which is configured by the EndOfTravelLimitSetup parameter.
+    CwEOTLimit = 2 ** 22
+    # CCW End Of Travel Limit Input Level: This represents the state of
+    # the CCW end of travel limit input. It is not affected by the active
+    # polarity, which is configured by the EndOfTravelLimitSetup parameter.
+    CcwEOTLimit = 2 ** 23
+    # Home Limit Input Level: This represents the state of the home limit
+    # input. It is not affected by the active polarity, which is configured by
+    # the EndOfTravelLimitSetup parameter.
+    HomeLimit = 2 ** 24
+    # Marker Input Level: This represents the state of the marker input.
+    MarkerInput = 2 ** 25
+    # Hall A Input Level: This represents the state of the Hall-effect
+    # sensor A input.
+    HallAInput = 2 ** 26
+    # Hall B Input Level: This represents the state of the Hall-effect
+    # sensor B input.
+    HallBInput = 2 ** 27
+    # Hall C Input Level: This represents the state of the Hall-effect
+    # sensor C input.
+    HallCInput = 2 ** 28
+    # Sine Encoder Input Error: An error condition is present on the Sine
+    # encoder input of the position feedback device.
+    SineEncoderError = 2 ** 29
+    # Cosine Encoder Input Error: An error condition is present on the
+    # Cosine encoder input of the position feedback device.
+    CosineEncoderError = 2 ** 30
+    # Emergency Stop Input Level: This represents the state of the
+    # emergency stop sense input.
+    ESTOPInput = 2 ** 31
 
 
 EOS_CHAR = '\n'

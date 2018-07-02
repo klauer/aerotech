@@ -3,7 +3,7 @@ import asyncio
 
 from .const import (EOS_CHAR, ACK_CHAR, NAK_CHAR, FAULT_CHAR, TIMEOUT_CHAR,
                     Drives, Variables, Commands, ScopeData, ScopeStatusType,
-                    DataCollectionMask, TaskState)
+                    DataCollectionMask, TaskState, AxisStatus)
 from .exceptions import (FailureResponseException, FaultResponseException,
                          TimeoutResponseException, UnknownResponseException,
                          WriteFailureException,
@@ -11,6 +11,14 @@ from .exceptions import (FailureResponseException, FaultResponseException,
 
 
 logger = logging.getLogger(__name__)
+
+
+def _normalize_axis(axis):
+    if isinstance(axis, str):
+        return axis
+    elif isinstance(axis, int):
+        return '@{}'.format(axis)
+    raise ValueError('Unexpected axis type (specify name or number)')
 
 
 class EnsembleGlobal:
@@ -177,6 +185,11 @@ class EnsembleComm:
                 await asyncio.sleep(0.1)
 
             await self.run_program(task_number, program_name)
+
+    async def get_axis_status(self, axis):
+        axis = _normalize_axis(axis)
+        status = await self.write_read('AXISSTATUS {}'.format(axis))
+        return AxisStatus(int(status))
 
 
 class EnsembleDoCommand(EnsembleComm):

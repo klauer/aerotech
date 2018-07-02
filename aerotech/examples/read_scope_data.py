@@ -23,7 +23,7 @@ if __name__ == '__main__':
     try:
         host = sys.argv[1]
     except IndexError:
-        host = 'moc-b34-mc02.slac.stanford.edu'
+        host = 'moc-b34-mc07.slac.stanford.edu'
         # host = 'moc-b34-mc08.slac.stanford.edu'
 
     logging.getLogger('aerotech').setLevel(logging.DEBUG)
