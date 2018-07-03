@@ -3,7 +3,7 @@ import asyncio
 
 from .const import (EOS_CHAR, ACK_CHAR, NAK_CHAR, FAULT_CHAR, TIMEOUT_CHAR,
                     Drives, Variables, Commands, ScopeData, ScopeStatusType,
-                    DataCollectionMask, TaskState, AxisStatus)
+                    DataCollectionMask, TaskState, AxisStatus, AxisFault)
 from .exceptions import (FailureResponseException, FaultResponseException,
                          TimeoutResponseException, UnknownResponseException,
                          WriteFailureException,
@@ -105,13 +105,18 @@ class EnsembleComm:
                                             loop=self.loop)
         self._reader, self._writer = r_w
 
-    async def write_read(self, line):
+    async def _write(self, line):
         await self._open_connection()
-
         if EOS_CHAR not in line:
             line = ''.join((line, EOS_CHAR))
 
-        # logger.debug('Writing %r', line)
+        self._writer.write(line.encode('latin-1'))
+
+    async def write_read(self, line):
+        await self._open_connection()
+        if EOS_CHAR not in line:
+            line = ''.join((line, EOS_CHAR))
+
         self._writer.write(line.encode('latin-1'))
 
         read = ''
@@ -186,10 +191,47 @@ class EnsembleComm:
 
             await self.run_program(task_number, program_name)
 
+    async def reset(self):
+        logger.debug('Resetting')
+        await self._write('RESET')
+
+    async def commit_parameters(self, *, reset=False):
+        logger.debug('Committing parameters...')
+        await self.write_read('COMMITPARAMETERS')
+        if reset:
+            await self.reset()
+
     async def get_axis_status(self, axis):
         axis = _normalize_axis(axis)
         status = await self.write_read('AXISSTATUS {}'.format(axis))
         return AxisStatus(int(status))
+
+    async def get_axis_fault_status(self, axis):
+        axis = _normalize_axis(axis)
+        fault = await self.write_read('AXISFAULT {}'.format(axis))
+        return AxisFault(int(fault))
+
+    async def move(self, axis_position_pairs: dict, *, speed, absolute):
+        axis_pos = ('{} {}'.format(_normalize_axis(axis), position)
+                    for axis, position in axis_position_pairs.items())
+        cmd = 'MOVE{} {} F{}'.format('ABS' if absolute else 'INC',
+                                     ' '.join(axis_pos), speed)
+        logger.debug('Moving: %s', cmd)
+        return await self.write_read(cmd)
+
+    async def wait_axis_status(self, axis, flags, *, poll_period=0.01):
+        while True:
+            status = await self.get_axis_status(axis)
+            if flags in status:
+                return
+            await asyncio.sleep(poll_period)
+
+    async def move_and_wait(self, axis_position_pairs: dict, *,
+                            wait_flags=AxisStatus.InPosition, speed, absolute):
+        await self.move(axis_position_pairs, speed=speed, absolute=absolute)
+        for axis in axis_position_pairs:
+            logger.debug('Waiting on axis %s', axis)
+            await self.wait_axis_status(axis, wait_flags)
 
 
 class EnsembleDoCommand(EnsembleComm):
@@ -218,6 +260,7 @@ class EnsembleDoCommand(EnsembleComm):
     async def check_program_status(self):
         '''Start doCommand.bcx if not already running'''
         await self.ensure_task(self.task_number, self.program_name)
+        return True
 
     async def write_command(self, command: Commands, *, wait=True,
                             int_args=None, double_args=None):

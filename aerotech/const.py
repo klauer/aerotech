@@ -212,6 +212,90 @@ class AxisStatus(IntFlag):
     ESTOPInput = 2 ** 31
 
 
+class AxisFault(IntFlag):
+    # Position Error Fault: The absolute value of the difference between the
+    # position command and the position feedback exceeded the threshold
+    # specified by the PositionErrorThreshold parameter.
+    PositionError = 2 ** 0
+    # Over Current Fault: The average motor current exceeded the threshold
+    # specified by the AverageCurrentThreshold and AverageCurrentTime
+    # parameters.
+    OverCurrent = 2 ** 1
+    # CW/Positive End-of-Travel Limit Fault: The axis encountered the clockwise
+    # (positive) end-of-travel limit switch.
+    CwEOTLimit = 2 ** 2
+    # CCW/Negative End-of-Travel Limit Fault: The axis encountered the
+    # counter-clockwise (negative) end-of-travel limit switch.
+    CcwEOTLimit = 2 ** 3
+    # CW/High Software Limit Fault: The axis was commanded to move beyond the
+    # position specified by the SoftwareLimitHigh parameter.
+    CwSoftLimit = 2 ** 4
+    # CCW/Low Software Limit Fault: The axis was commanded to move beyond the
+    # position specified by the SoftwareLimitLow parameter.
+    CcwSoftLimit = 2 ** 5
+    # Amplifier Fault: The amplifier for this axis exceeded its maximum current
+    # rating or experienced an internal error.
+    AmplifierFault = 2 ** 6
+    # Position Feedback Fault: The drive detected a problem with the feedback
+    # device specified by the PositionFeedbackType and PositionFeedbackChannel
+    # parameters.
+    PositionFbk = 2 ** 7
+    # Velocity Feedback Fault: The drive detected a problem with the feedback
+    # device specified by the VelocityFeedbackType and VelocityFeedbackChannel
+    # parameters.
+    VelocityFbk = 2 ** 8
+    # Hall Sensor Fault: The drive detected an invalid state (all high or all
+    # low) for the Hall-effect sensor inputs on this axis.
+    HallFault = 2 ** 9
+    # Maximum Velocity Command Fault: The commanded velocity is more than the
+    # velocity command threshold. Before the axis is homed, this threshold is
+    # specified by the VelocityCommandThresholdBeforeHome parameter. After the
+    # axis is homed, this threshold is specified by the
+    # VelocityCommandThreshold parameter.
+    MaxVelocity = 2 ** 10
+    # Emergency Stop Fault: The emergency stop sense input, specified by the
+    # ESTOPFaultInput parameter, was triggered.
+    EstopFault = 2 ** 11
+    # Velocity Error Fault: The absolute value of the difference between the
+    # velocity command and the velocity feedback exceeded the threshold
+    # specified by the VelocityErrorThreshold parameter.
+    VelocityError = 2 ** 12
+    # External Fault: The external fault input, specified by the
+    # ExternalFaultAnalogInput or ExternalFaultDigitalInput parameters, was
+    # triggered.
+    ExternalFault = 2 ** 15
+    # Motor Temperature Fault: The motor thermistor input was triggered, which
+    # indicates that the motor exceeded its maximum recommended operating
+    # temperature.
+    MotorTemp = 2 ** 17
+    # Amplifier Temperature Fault: The amplifier exceeded its maximum
+    # recommended operating temperature.
+    AmplifierTemp = 2 ** 18
+    # Encoder Fault: The encoder fault input on the motor feedback connector
+    # was triggered.
+    EncoderFault = 2 ** 19
+    # Communication Lost Fault: One or more of the drives on the network lost
+    # communications with the controller.
+    CommLost = 2 ** 20
+    # Feedback Scaling Fault: The difference between the position feedback and
+    # the scaled (adjusted by GainKv) velocity feedback exceeds the threshold
+    # specified by the PositionErrorThreshold parameter.
+    FbkScalingFault = 2 ** 23
+    # Marker Search Fault: The distance that the axis moved while searching for
+    # the marker exceeded the threshold specified by the MarkerSearchThreshold
+    # parameter.
+    MrkSearchFault = 2 ** 24
+    # Voltage Clamp Fault: The commanded voltage output exceeded the value of
+    # the PiezoVoltageClampLow or PiezoVoltageClampHigh parameter.
+    VoltageClamp = 2 ** 27
+    # Power Supply Fault: The power supply output has exceeded the allowable
+    # power or temperature threshold.
+    PowerSupply = 2 ** 28
+    # Internal Fault: The drive failed has encountered an internal error and
+    # had to disable. For assistance, contact Aerotech Customer Service.
+    Internal = 2 ** 30
+
+
 EOS_CHAR = '\n'
 ACK_CHAR = '%'
 NAK_CHAR = '!'
