@@ -105,6 +105,14 @@ class EnsembleComm:
                                             loop=self.loop)
         self._reader, self._writer = r_w
 
+    async def close(self):
+        if self._reader is None:
+            return
+
+        self._writer.close()
+        self._reader = None
+        self._writer = None
+
     async def _write(self, line):
         await self._open_connection()
         if EOS_CHAR not in line:
