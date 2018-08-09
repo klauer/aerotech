@@ -227,19 +227,25 @@ class EnsembleComm:
         logger.debug('Moving: %s', cmd)
         return await self.write_read(cmd)
 
-    async def wait_axis_status(self, axis, flags, *, poll_period=0.01):
+    async def wait_axis_status(self, axis, flags, *, poll_period=0.01,
+                               check_enabled=False):
         while True:
             status = await self.get_axis_status(axis)
             if flags in status:
-                return
+                return True
+            elif check_enabled and AxisStatus.Enabled not in status:
+                return False
+
             await asyncio.sleep(poll_period)
 
     async def move_and_wait(self, axis_position_pairs: dict, *,
-                            wait_flags=AxisStatus.InPosition, speed, absolute):
+                            wait_flags=AxisStatus.InPosition, speed, absolute,
+                            poll_period=0.01):
         await self.move(axis_position_pairs, speed=speed, absolute=absolute)
         for axis in axis_position_pairs:
             logger.debug('Waiting on axis %s', axis)
-            await self.wait_axis_status(axis, wait_flags)
+            await self.wait_axis_status(axis, wait_flags, check_enabled=True,
+                                        poll_period=poll_period)
 
 
 class EnsembleDoCommand(EnsembleComm):
