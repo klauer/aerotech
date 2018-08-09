@@ -247,6 +247,16 @@ class EnsembleComm:
             await self.wait_axis_status(axis, wait_flags, check_enabled=True,
                                         poll_period=poll_period)
 
+    async def home(self, axes, wait_flags=AxisStatus.InPosition,
+                   poll_period=0.01):
+        if isinstance(axes, str):
+            axes = [axes]
+        await self.write_read('HOME {}'.format(' '.join(axes)))
+        for axis in axes:
+            logger.debug('Waiting on axis %s', axis)
+            await self.wait_axis_status(axis, wait_flags, check_enabled=True,
+                                        poll_period=poll_period)
+
 
 class EnsembleDoCommand(EnsembleComm):
     '''Ensemble running script doCommand.ab/bcx as task #1'''
