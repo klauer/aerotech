@@ -1,0 +1,6350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1194</width>
+    <height>948</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="QScrollArea" name="scrollArea">
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="scrollAreaWidgetContents">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1000</width>
+        <height>1000</height>
+       </rect>
+      </property>
+     <layout class="QGridLayout" name="gridLayout">
+
+
+    <item row="0" column="0">
+     <widget class="QLabel" name="LabelAxisName">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>AxisName</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="PyDMLabel" name="AxisName">
+      <property name="toolTip">
+       <string>Parameter number 140 - AxisName</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},140)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="1" column="0">
+     <widget class="QLabel" name="LabelAxisType">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>AxisType</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="PyDMLabel" name="AxisType">
+      <property name="toolTip">
+       <string>Parameter number 0 - AxisType</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},0)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="2" column="0">
+     <widget class="QLabel" name="LabelReverseMotionDirection">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>ReverseMotionDirection</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="PyDMLabel" name="ReverseMotionDirection">
+      <property name="toolTip">
+       <string>Parameter number 1 - ReverseMotionDirection</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},1)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="3" column="0">
+     <widget class="QLabel" name="LabelCountsPerUnit">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>CountsPerUnit</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="PyDMLabel" name="CountsPerUnit">
+      <property name="toolTip">
+       <string>Parameter number 2 - CountsPerUnit</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},2)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="4" column="0">
+     <widget class="QLabel" name="LabelServoRate">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>ServoRate</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="PyDMLabel" name="ServoRate">
+      <property name="toolTip">
+       <string>Parameter number 3 - ServoRate</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},3)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="5" column="0">
+     <widget class="QLabel" name="LabelServoSetup">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>ServoSetup</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="PyDMLabel" name="ServoSetup">
+      <property name="toolTip">
+       <string>Parameter number 4 - ServoSetup</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Hex</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},4)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="6" column="0">
+     <widget class="QLabel" name="LabelGainKpos">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>GainKpos</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="PyDMLabel" name="GainKpos">
+      <property name="toolTip">
+       <string>Parameter number 5 - GainKpos</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},5)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="7" column="0">
+     <widget class="QLabel" name="LabelGainKi">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>GainKi</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="1">
+     <widget class="PyDMLabel" name="GainKi">
+      <property name="toolTip">
+       <string>Parameter number 6 - GainKi</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},6)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="8" column="0">
+     <widget class="QLabel" name="LabelGainKp">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>GainKp</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="1">
+     <widget class="PyDMLabel" name="GainKp">
+      <property name="toolTip">
+       <string>Parameter number 7 - GainKp</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},7)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="9" column="0">
+     <widget class="QLabel" name="LabelGainVff">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>GainVff</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="1">
+     <widget class="PyDMLabel" name="GainVff">
+      <property name="toolTip">
+       <string>Parameter number 8 - GainVff</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},8)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="10" column="0">
+     <widget class="QLabel" name="LabelGainAff">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>GainAff</string>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="1">
+     <widget class="PyDMLabel" name="GainAff">
+      <property name="toolTip">
+       <string>Parameter number 9 - GainAff</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},9)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="11" column="0">
+     <widget class="QLabel" name="LabelGainKv">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>GainKv</string>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="1">
+     <widget class="PyDMLabel" name="GainKv">
+      <property name="toolTip">
+       <string>Parameter number 10 - GainKv</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},10)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="12" column="0">
+     <widget class="QLabel" name="LabelGainKpi">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>GainKpi</string>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="1">
+     <widget class="PyDMLabel" name="GainKpi">
+      <property name="toolTip">
+       <string>Parameter number 11 - GainKpi</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},11)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="13" column="0">
+     <widget class="QLabel" name="LabelGainPff">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>GainPff</string>
+      </property>
+     </widget>
+    </item>
+    <item row="13" column="1">
+     <widget class="PyDMLabel" name="GainPff">
+      <property name="toolTip">
+       <string>Parameter number 762 - GainPff</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},762)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="14" column="0">
+     <widget class="QLabel" name="LabelGainKd1">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>GainKd1</string>
+      </property>
+     </widget>
+    </item>
+    <item row="14" column="1">
+     <widget class="PyDMLabel" name="GainKd1">
+      <property name="toolTip">
+       <string>Parameter number 779 - GainKd1</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},779)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="15" column="0">
+     <widget class="QLabel" name="LabelGainKp1">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>GainKp1</string>
+      </property>
+     </widget>
+    </item>
+    <item row="15" column="1">
+     <widget class="PyDMLabel" name="GainKp1">
+      <property name="toolTip">
+       <string>Parameter number 780 - GainKp1</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},780)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="16" column="0">
+     <widget class="QLabel" name="LabelGainKsi1">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>GainKsi1</string>
+      </property>
+     </widget>
+    </item>
+    <item row="16" column="1">
+     <widget class="PyDMLabel" name="GainKsi1">
+      <property name="toolTip">
+       <string>Parameter number 817 - GainKsi1</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},817)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="17" column="0">
+     <widget class="QLabel" name="LabelGainKsi2">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>GainKsi2</string>
+      </property>
+     </widget>
+    </item>
+    <item row="17" column="1">
+     <widget class="PyDMLabel" name="GainKsi2">
+      <property name="toolTip">
+       <string>Parameter number 818 - GainKsi2</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},818)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="18" column="0">
+     <widget class="QLabel" name="LabelStepperDampingGain">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>StepperDampingGain</string>
+      </property>
+     </widget>
+    </item>
+    <item row="18" column="1">
+     <widget class="PyDMLabel" name="StepperDampingGain">
+      <property name="toolTip">
+       <string>Parameter number 848 - StepperDampingGain</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},848)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="19" column="0">
+     <widget class="QLabel" name="LabelStepperDampingCutoffFrequency">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>StepperDampingCutoffFrequency</string>
+      </property>
+     </widget>
+    </item>
+    <item row="19" column="1">
+     <widget class="PyDMLabel" name="StepperDampingCutoffFrequency">
+      <property name="toolTip">
+       <string>Parameter number 849 - StepperDampingCutoffFrequency</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},849)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="20" column="0">
+     <widget class="QLabel" name="LabelCurrentGainKi">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>CurrentGainKi</string>
+      </property>
+     </widget>
+    </item>
+    <item row="20" column="1">
+     <widget class="PyDMLabel" name="CurrentGainKi">
+      <property name="toolTip">
+       <string>Parameter number 24 - CurrentGainKi</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},24)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="21" column="0">
+     <widget class="QLabel" name="LabelCurrentGainKp">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>CurrentGainKp</string>
+      </property>
+     </widget>
+    </item>
+    <item row="21" column="1">
+     <widget class="PyDMLabel" name="CurrentGainKp">
+      <property name="toolTip">
+       <string>Parameter number 25 - CurrentGainKp</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},25)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="22" column="0">
+     <widget class="QLabel" name="LabelAmplifierDeadtime">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>AmplifierDeadtime</string>
+      </property>
+     </widget>
+    </item>
+    <item row="22" column="1">
+     <widget class="PyDMLabel" name="AmplifierDeadtime">
+      <property name="toolTip">
+       <string>Parameter number 22 - AmplifierDeadtime</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},22)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="23" column="0">
+     <widget class="QLabel" name="LabelRolloverCounts">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>RolloverCounts</string>
+      </property>
+     </widget>
+    </item>
+    <item row="23" column="1">
+     <widget class="PyDMLabel" name="RolloverCounts">
+      <property name="toolTip">
+       <string>Parameter number 23 - RolloverCounts</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},23)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="24" column="0">
+     <widget class="QLabel" name="LabelFaultMask">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>FaultMask</string>
+      </property>
+     </widget>
+    </item>
+    <item row="24" column="1">
+     <widget class="PyDMLabel" name="FaultMask">
+      <property name="toolTip">
+       <string>Parameter number 26 - FaultMask</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Hex</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},26)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="25" column="0">
+     <widget class="QLabel" name="LabelFaultMaskDisable">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>FaultMaskDisable</string>
+      </property>
+     </widget>
+    </item>
+    <item row="25" column="1">
+     <widget class="PyDMLabel" name="FaultMaskDisable">
+      <property name="toolTip">
+       <string>Parameter number 27 - FaultMaskDisable</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Hex</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},27)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="26" column="0">
+     <widget class="QLabel" name="LabelFaultMaskDecel">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>FaultMaskDecel</string>
+      </property>
+     </widget>
+    </item>
+    <item row="26" column="1">
+     <widget class="PyDMLabel" name="FaultMaskDecel">
+      <property name="toolTip">
+       <string>Parameter number 28 - FaultMaskDecel</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Hex</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},28)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="27" column="0">
+     <widget class="QLabel" name="LabelEnableBrakeControl">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>EnableBrakeControl</string>
+      </property>
+     </widget>
+    </item>
+    <item row="27" column="1">
+     <widget class="PyDMLabel" name="EnableBrakeControl">
+      <property name="toolTip">
+       <string>Parameter number 29 - EnableBrakeControl</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},29)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="28" column="0">
+     <widget class="QLabel" name="LabelFaultMaskOutput">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>FaultMaskOutput</string>
+      </property>
+     </widget>
+    </item>
+    <item row="28" column="1">
+     <widget class="PyDMLabel" name="FaultMaskOutput">
+      <property name="toolTip">
+       <string>Parameter number 30 - FaultMaskOutput</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Hex</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},30)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="29" column="0">
+     <widget class="QLabel" name="LabelESTOPFaultInput">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>ESTOPFaultInput</string>
+      </property>
+     </widget>
+    </item>
+    <item row="29" column="1">
+     <widget class="PyDMLabel" name="ESTOPFaultInput">
+      <property name="toolTip">
+       <string>Parameter number 31 - ESTOPFaultInput</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},31)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="30" column="0">
+     <widget class="QLabel" name="LabelPositionErrorThreshold">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>PositionErrorThreshold</string>
+      </property>
+     </widget>
+    </item>
+    <item row="30" column="1">
+     <widget class="PyDMLabel" name="PositionErrorThreshold">
+      <property name="toolTip">
+       <string>Parameter number 32 - PositionErrorThreshold</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},32)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="31" column="0">
+     <widget class="QLabel" name="LabelAverageCurrentThreshold">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>AverageCurrentThreshold</string>
+      </property>
+     </widget>
+    </item>
+    <item row="31" column="1">
+     <widget class="PyDMLabel" name="AverageCurrentThreshold">
+      <property name="toolTip">
+       <string>Parameter number 33 - AverageCurrentThreshold</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},33)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="32" column="0">
+     <widget class="QLabel" name="LabelAverageCurrentTime">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>AverageCurrentTime</string>
+      </property>
+     </widget>
+    </item>
+    <item row="32" column="1">
+     <widget class="PyDMLabel" name="AverageCurrentTime">
+      <property name="toolTip">
+       <string>Parameter number 34 - AverageCurrentTime</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},34)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="33" column="0">
+     <widget class="QLabel" name="LabelVelocityCommandThreshold">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>VelocityCommandThreshold</string>
+      </property>
+     </widget>
+    </item>
+    <item row="33" column="1">
+     <widget class="PyDMLabel" name="VelocityCommandThreshold">
+      <property name="toolTip">
+       <string>Parameter number 35 - VelocityCommandThreshold</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},35)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="34" column="0">
+     <widget class="QLabel" name="LabelVelocityErrorThreshold">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>VelocityErrorThreshold</string>
+      </property>
+     </widget>
+    </item>
+    <item row="34" column="1">
+     <widget class="PyDMLabel" name="VelocityErrorThreshold">
+      <property name="toolTip">
+       <string>Parameter number 36 - VelocityErrorThreshold</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},36)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="35" column="0">
+     <widget class="QLabel" name="LabelSoftwareLimitLow">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>SoftwareLimitLow</string>
+      </property>
+     </widget>
+    </item>
+    <item row="35" column="1">
+     <widget class="PyDMLabel" name="SoftwareLimitLow">
+      <property name="toolTip">
+       <string>Parameter number 37 - SoftwareLimitLow</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},37)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="36" column="0">
+     <widget class="QLabel" name="LabelSoftwareLimitHigh">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>SoftwareLimitHigh</string>
+      </property>
+     </widget>
+    </item>
+    <item row="36" column="1">
+     <widget class="PyDMLabel" name="SoftwareLimitHigh">
+      <property name="toolTip">
+       <string>Parameter number 38 - SoftwareLimitHigh</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},38)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="37" column="0">
+     <widget class="QLabel" name="LabelMaxCurrentClamp">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>MaxCurrentClamp</string>
+      </property>
+     </widget>
+    </item>
+    <item row="37" column="1">
+     <widget class="PyDMLabel" name="MaxCurrentClamp">
+      <property name="toolTip">
+       <string>Parameter number 39 - MaxCurrentClamp</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},39)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="38" column="0">
+     <widget class="QLabel" name="LabelInPositionDistance">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>InPositionDistance</string>
+      </property>
+     </widget>
+    </item>
+    <item row="38" column="1">
+     <widget class="PyDMLabel" name="InPositionDistance">
+      <property name="toolTip">
+       <string>Parameter number 40 - InPositionDistance</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},40)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="39" column="0">
+     <widget class="QLabel" name="LabelMotorType">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>MotorType</string>
+      </property>
+     </widget>
+    </item>
+    <item row="39" column="1">
+     <widget class="PyDMLabel" name="MotorType">
+      <property name="toolTip">
+       <string>Parameter number 41 - MotorType</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},41)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="40" column="0">
+     <widget class="QLabel" name="LabelCyclesPerRev">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>CyclesPerRev</string>
+      </property>
+     </widget>
+    </item>
+    <item row="40" column="1">
+     <widget class="PyDMLabel" name="CyclesPerRev">
+      <property name="toolTip">
+       <string>Parameter number 42 - CyclesPerRev</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},42)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="41" column="0">
+     <widget class="QLabel" name="LabelCountsPerRev">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>CountsPerRev</string>
+      </property>
+     </widget>
+    </item>
+    <item row="41" column="1">
+     <widget class="PyDMLabel" name="CountsPerRev">
+      <property name="toolTip">
+       <string>Parameter number 43 - CountsPerRev</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},43)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="42" column="0">
+     <widget class="QLabel" name="LabelCommutationOffset">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>CommutationOffset</string>
+      </property>
+     </widget>
+    </item>
+    <item row="42" column="1">
+     <widget class="PyDMLabel" name="CommutationOffset">
+      <property name="toolTip">
+       <string>Parameter number 44 - CommutationOffset</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},44)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="43" column="0">
+     <widget class="QLabel" name="LabelAutoMsetTime">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>AutoMsetTime</string>
+      </property>
+     </widget>
+    </item>
+    <item row="43" column="1">
+     <widget class="PyDMLabel" name="AutoMsetTime">
+      <property name="toolTip">
+       <string>Parameter number 45 - AutoMsetTime</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},45)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="44" column="0">
+     <widget class="QLabel" name="LabelAutoMsetCurrent">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>AutoMsetCurrent</string>
+      </property>
+     </widget>
+    </item>
+    <item row="44" column="1">
+     <widget class="PyDMLabel" name="AutoMsetCurrent">
+      <property name="toolTip">
+       <string>Parameter number 46 - AutoMsetCurrent</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},46)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="45" column="0">
+     <widget class="QLabel" name="LabelPositionFeedbackType">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>PositionFeedbackType</string>
+      </property>
+     </widget>
+    </item>
+    <item row="45" column="1">
+     <widget class="PyDMLabel" name="PositionFeedbackType">
+      <property name="toolTip">
+       <string>Parameter number 47 - PositionFeedbackType</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},47)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="46" column="0">
+     <widget class="QLabel" name="LabelPositionFeedbackChannel">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>PositionFeedbackChannel</string>
+      </property>
+     </widget>
+    </item>
+    <item row="46" column="1">
+     <widget class="PyDMLabel" name="PositionFeedbackChannel">
+      <property name="toolTip">
+       <string>Parameter number 48 - PositionFeedbackChannel</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},48)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="47" column="0">
+     <widget class="QLabel" name="LabelVelocityFeedbackType">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>VelocityFeedbackType</string>
+      </property>
+     </widget>
+    </item>
+    <item row="47" column="1">
+     <widget class="PyDMLabel" name="VelocityFeedbackType">
+      <property name="toolTip">
+       <string>Parameter number 49 - VelocityFeedbackType</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},49)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="48" column="0">
+     <widget class="QLabel" name="LabelVelocityFeedbackChannel">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>VelocityFeedbackChannel</string>
+      </property>
+     </widget>
+    </item>
+    <item row="48" column="1">
+     <widget class="PyDMLabel" name="VelocityFeedbackChannel">
+      <property name="toolTip">
+       <string>Parameter number 50 - VelocityFeedbackChannel</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},50)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="49" column="0">
+     <widget class="QLabel" name="LabelEncoderMultiplicationFactor">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>EncoderMultiplicationFactor</string>
+      </property>
+     </widget>
+    </item>
+    <item row="49" column="1">
+     <widget class="PyDMLabel" name="EncoderMultiplicationFactor">
+      <property name="toolTip">
+       <string>Parameter number 51 - EncoderMultiplicationFactor</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},51)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="0" column="2">
+     <widget class="QLabel" name="LabelEncoderSineGain">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>EncoderSineGain</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="3">
+     <widget class="PyDMLabel" name="EncoderSineGain">
+      <property name="toolTip">
+       <string>Parameter number 52 - EncoderSineGain</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},52)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="1" column="2">
+     <widget class="QLabel" name="LabelEncoderSineOffset">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>EncoderSineOffset</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="3">
+     <widget class="PyDMLabel" name="EncoderSineOffset">
+      <property name="toolTip">
+       <string>Parameter number 53 - EncoderSineOffset</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},53)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="2" column="2">
+     <widget class="QLabel" name="LabelEncoderCosineGain">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>EncoderCosineGain</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="3">
+     <widget class="PyDMLabel" name="EncoderCosineGain">
+      <property name="toolTip">
+       <string>Parameter number 54 - EncoderCosineGain</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},54)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="3" column="2">
+     <widget class="QLabel" name="LabelEncoderCosineOffset">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>EncoderCosineOffset</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="3">
+     <widget class="PyDMLabel" name="EncoderCosineOffset">
+      <property name="toolTip">
+       <string>Parameter number 55 - EncoderCosineOffset</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},55)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="4" column="2">
+     <widget class="QLabel" name="LabelEncoderPhase">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>EncoderPhase</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="3">
+     <widget class="PyDMLabel" name="EncoderPhase">
+      <property name="toolTip">
+       <string>Parameter number 56 - EncoderPhase</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},56)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="5" column="2">
+     <widget class="QLabel" name="LabelGantryMasterAxis">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>GantryMasterAxis</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="3">
+     <widget class="PyDMLabel" name="GantryMasterAxis">
+      <property name="toolTip">
+       <string>Parameter number 57 - GantryMasterAxis</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},57)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="6" column="2">
+     <widget class="QLabel" name="LabelLimitDecelDistance">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>LimitDecelDistance</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="3">
+     <widget class="PyDMLabel" name="LimitDecelDistance">
+      <property name="toolTip">
+       <string>Parameter number 59 - LimitDecelDistance</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},59)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="7" column="2">
+     <widget class="QLabel" name="LabelLimitDebounceTime">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>LimitDebounceTime</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="3">
+     <widget class="PyDMLabel" name="LimitDebounceTime">
+      <property name="toolTip">
+       <string>Parameter number 60 - LimitDebounceTime</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},60)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="8" column="2">
+     <widget class="QLabel" name="LabelEndOfTravelLimitSetup">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>EndOfTravelLimitSetup</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="3">
+     <widget class="PyDMLabel" name="EndOfTravelLimitSetup">
+      <property name="toolTip">
+       <string>Parameter number 61 - EndOfTravelLimitSetup</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Hex</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},61)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="9" column="2">
+     <widget class="QLabel" name="LabelBacklashDistance">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>BacklashDistance</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="3">
+     <widget class="PyDMLabel" name="BacklashDistance">
+      <property name="toolTip">
+       <string>Parameter number 62 - BacklashDistance</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},62)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="10" column="2">
+     <widget class="QLabel" name="LabelFaultOutputSetup">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>FaultOutputSetup</string>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="3">
+     <widget class="PyDMLabel" name="FaultOutputSetup">
+      <property name="toolTip">
+       <string>Parameter number 63 - FaultOutputSetup</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Hex</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},63)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="11" column="2">
+     <widget class="QLabel" name="LabelFaultOutputState">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>FaultOutputState</string>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="3">
+     <widget class="PyDMLabel" name="FaultOutputState">
+      <property name="toolTip">
+       <string>Parameter number 64 - FaultOutputState</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},64)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="12" column="2">
+     <widget class="QLabel" name="LabelIOSetup">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>IOSetup</string>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="3">
+     <widget class="PyDMLabel" name="IOSetup">
+      <property name="toolTip">
+       <string>Parameter number 65 - IOSetup</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Hex</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},65)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="13" column="2">
+     <widget class="QLabel" name="LabelBrakeOutput">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>BrakeOutput</string>
+      </property>
+     </widget>
+    </item>
+    <item row="13" column="3">
+     <widget class="PyDMLabel" name="BrakeOutput">
+      <property name="toolTip">
+       <string>Parameter number 66 - BrakeOutput</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},66)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="14" column="2">
+     <widget class="QLabel" name="LabelEncoderDivider">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>EncoderDivider</string>
+      </property>
+     </widget>
+    </item>
+    <item row="14" column="3">
+     <widget class="PyDMLabel" name="EncoderDivider">
+      <property name="toolTip">
+       <string>Parameter number 67 - EncoderDivider</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},67)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="15" column="2">
+     <widget class="QLabel" name="LabelExternalFaultDigitalInput">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>ExternalFaultDigitalInput</string>
+      </property>
+     </widget>
+    </item>
+    <item row="15" column="3">
+     <widget class="PyDMLabel" name="ExternalFaultDigitalInput">
+      <property name="toolTip">
+       <string>Parameter number 68 - ExternalFaultDigitalInput</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},68)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="16" column="2">
+     <widget class="QLabel" name="LabelBrakeDisableDelay">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>BrakeDisableDelay</string>
+      </property>
+     </widget>
+    </item>
+    <item row="16" column="3">
+     <widget class="PyDMLabel" name="BrakeDisableDelay">
+      <property name="toolTip">
+       <string>Parameter number 69 - BrakeDisableDelay</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},69)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="17" column="2">
+     <widget class="QLabel" name="LabelMaxJogDistance">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>MaxJogDistance</string>
+      </property>
+     </widget>
+    </item>
+    <item row="17" column="3">
+     <widget class="PyDMLabel" name="MaxJogDistance">
+      <property name="toolTip">
+       <string>Parameter number 70 - MaxJogDistance</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},70)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="18" column="2">
+     <widget class="QLabel" name="LabelDefaultSpeed">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>DefaultSpeed</string>
+      </property>
+     </widget>
+    </item>
+    <item row="18" column="3">
+     <widget class="PyDMLabel" name="DefaultSpeed">
+      <property name="toolTip">
+       <string>Parameter number 71 - DefaultSpeed</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},71)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="19" column="2">
+     <widget class="QLabel" name="LabelDefaultRampRate">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>DefaultRampRate</string>
+      </property>
+     </widget>
+    </item>
+    <item row="19" column="3">
+     <widget class="PyDMLabel" name="DefaultRampRate">
+      <property name="toolTip">
+       <string>Parameter number 72 - DefaultRampRate</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},72)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="20" column="2">
+     <widget class="QLabel" name="LabelAbortDecelRate">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>AbortDecelRate</string>
+      </property>
+     </widget>
+    </item>
+    <item row="20" column="3">
+     <widget class="PyDMLabel" name="AbortDecelRate">
+      <property name="toolTip">
+       <string>Parameter number 73 - AbortDecelRate</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},73)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="21" column="2">
+     <widget class="QLabel" name="LabelHomeType">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>HomeType</string>
+      </property>
+     </widget>
+    </item>
+    <item row="21" column="3">
+     <widget class="PyDMLabel" name="HomeType">
+      <property name="toolTip">
+       <string>Parameter number 74 - HomeType</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},74)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="22" column="2">
+     <widget class="QLabel" name="LabelHomeSetup">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>HomeSetup</string>
+      </property>
+     </widget>
+    </item>
+    <item row="22" column="3">
+     <widget class="PyDMLabel" name="HomeSetup">
+      <property name="toolTip">
+       <string>Parameter number 75 - HomeSetup</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Hex</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},75)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="23" column="2">
+     <widget class="QLabel" name="LabelHomeSpeed">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>HomeSpeed</string>
+      </property>
+     </widget>
+    </item>
+    <item row="23" column="3">
+     <widget class="PyDMLabel" name="HomeSpeed">
+      <property name="toolTip">
+       <string>Parameter number 76 - HomeSpeed</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},76)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="24" column="2">
+     <widget class="QLabel" name="LabelHomeOffset">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>HomeOffset</string>
+      </property>
+     </widget>
+    </item>
+    <item row="24" column="3">
+     <widget class="PyDMLabel" name="HomeOffset">
+      <property name="toolTip">
+       <string>Parameter number 77 - HomeOffset</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},77)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="25" column="2">
+     <widget class="QLabel" name="LabelHomeRampRate">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>HomeRampRate</string>
+      </property>
+     </widget>
+    </item>
+    <item row="25" column="3">
+     <widget class="PyDMLabel" name="HomeRampRate">
+      <property name="toolTip">
+       <string>Parameter number 78 - HomeRampRate</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},78)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="26" column="2">
+     <widget class="QLabel" name="LabelDefaultWaitMode">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>DefaultWaitMode</string>
+      </property>
+     </widget>
+    </item>
+    <item row="26" column="3">
+     <widget class="PyDMLabel" name="DefaultWaitMode">
+      <property name="toolTip">
+       <string>Parameter number 79 - DefaultWaitMode</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},79)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="27" column="2">
+     <widget class="QLabel" name="LabelDefaultSCurve">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>DefaultSCurve</string>
+      </property>
+     </widget>
+    </item>
+    <item row="27" column="3">
+     <widget class="PyDMLabel" name="DefaultSCurve">
+      <property name="toolTip">
+       <string>Parameter number 80 - DefaultSCurve</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},80)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="28" column="2">
+     <widget class="QLabel" name="LabelDataCollectionPoints">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>DataCollectionPoints</string>
+      </property>
+     </widget>
+    </item>
+    <item row="28" column="3">
+     <widget class="PyDMLabel" name="DataCollectionPoints">
+      <property name="toolTip">
+       <string>Parameter number 81 - DataCollectionPoints</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},81)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="29" column="2">
+     <widget class="QLabel" name="LabelStepperResolution">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>StepperResolution</string>
+      </property>
+     </widget>
+    </item>
+    <item row="29" column="3">
+     <widget class="PyDMLabel" name="StepperResolution">
+      <property name="toolTip">
+       <string>Parameter number 83 - StepperResolution</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},83)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="30" column="2">
+     <widget class="QLabel" name="LabelStepperRunningCurrent">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>StepperRunningCurrent</string>
+      </property>
+     </widget>
+    </item>
+    <item row="30" column="3">
+     <widget class="PyDMLabel" name="StepperRunningCurrent">
+      <property name="toolTip">
+       <string>Parameter number 84 - StepperRunningCurrent</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},84)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="31" column="2">
+     <widget class="QLabel" name="LabelStepperHoldingCurrent">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>StepperHoldingCurrent</string>
+      </property>
+     </widget>
+    </item>
+    <item row="31" column="3">
+     <widget class="PyDMLabel" name="StepperHoldingCurrent">
+      <property name="toolTip">
+       <string>Parameter number 85 - StepperHoldingCurrent</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},85)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="32" column="2">
+     <widget class="QLabel" name="LabelStepperVerificationSpeed">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>StepperVerificationSpeed</string>
+      </property>
+     </widget>
+    </item>
+    <item row="32" column="3">
+     <widget class="PyDMLabel" name="StepperVerificationSpeed">
+      <property name="toolTip">
+       <string>Parameter number 86 - StepperVerificationSpeed</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},86)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="33" column="2">
+     <widget class="QLabel" name="LabelLimitDebounceDistance">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>LimitDebounceDistance</string>
+      </property>
+     </widget>
+    </item>
+    <item row="33" column="3">
+     <widget class="PyDMLabel" name="LimitDebounceDistance">
+      <property name="toolTip">
+       <string>Parameter number 87 - LimitDebounceDistance</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},87)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="34" column="2">
+     <widget class="QLabel" name="LabelGearCamSource">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>GearCamSource</string>
+      </property>
+     </widget>
+    </item>
+    <item row="34" column="3">
+     <widget class="PyDMLabel" name="GearCamSource">
+      <property name="toolTip">
+       <string>Parameter number 98 - GearCamSource</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},98)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="35" column="2">
+     <widget class="QLabel" name="LabelGearCamIndex">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>GearCamIndex</string>
+      </property>
+     </widget>
+    </item>
+    <item row="35" column="3">
+     <widget class="PyDMLabel" name="GearCamIndex">
+      <property name="toolTip">
+       <string>Parameter number 99 - GearCamIndex</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},99)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="36" column="2">
+     <widget class="QLabel" name="LabelGearCamScaleFactor">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>GearCamScaleFactor</string>
+      </property>
+     </widget>
+    </item>
+    <item row="36" column="3">
+     <widget class="PyDMLabel" name="GearCamScaleFactor">
+      <property name="toolTip">
+       <string>Parameter number 100 - GearCamScaleFactor</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},100)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="37" column="2">
+     <widget class="QLabel" name="LabelGearCamAnalogDeadband">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>GearCamAnalogDeadband</string>
+      </property>
+     </widget>
+    </item>
+    <item row="37" column="3">
+     <widget class="PyDMLabel" name="GearCamAnalogDeadband">
+      <property name="toolTip">
+       <string>Parameter number 105 - GearCamAnalogDeadband</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},105)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="38" column="2">
+     <widget class="QLabel" name="LabelMaxJogSpeed">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>MaxJogSpeed</string>
+      </property>
+     </widget>
+    </item>
+    <item row="38" column="3">
+     <widget class="PyDMLabel" name="MaxJogSpeed">
+      <property name="toolTip">
+       <string>Parameter number 123 - MaxJogSpeed</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},123)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="39" column="2">
+     <widget class="QLabel" name="LabelCalibrationFile1D">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>CalibrationFile1D</string>
+      </property>
+     </widget>
+    </item>
+    <item row="39" column="3">
+     <widget class="PyDMLabel" name="CalibrationFile1D">
+      <property name="toolTip">
+       <string>Parameter number 128 - CalibrationFile1D</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},128)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="40" column="2">
+     <widget class="QLabel" name="LabelUnitsName">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>UnitsName</string>
+      </property>
+     </widget>
+    </item>
+    <item row="40" column="3">
+     <widget class="PyDMLabel" name="UnitsName">
+      <property name="toolTip">
+       <string>Parameter number 129 - UnitsName</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},129)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="41" column="2">
+     <widget class="QLabel" name="LabelEnDatEncoderSetup">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>EnDatEncoderSetup</string>
+      </property>
+     </widget>
+    </item>
+    <item row="41" column="3">
+     <widget class="PyDMLabel" name="EnDatEncoderSetup">
+      <property name="toolTip">
+       <string>Parameter number 147 - EnDatEncoderSetup</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Hex</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},147)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="42" column="2">
+     <widget class="QLabel" name="LabelEnDatEncoderResolution">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>EnDatEncoderResolution</string>
+      </property>
+     </widget>
+    </item>
+    <item row="42" column="3">
+     <widget class="PyDMLabel" name="EnDatEncoderResolution">
+      <property name="toolTip">
+       <string>Parameter number 148 - EnDatEncoderResolution</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},148)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="43" column="2">
+     <widget class="QLabel" name="LabelEnDatEncoderTurns">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>EnDatEncoderTurns</string>
+      </property>
+     </widget>
+    </item>
+    <item row="43" column="3">
+     <widget class="PyDMLabel" name="EnDatEncoderTurns">
+      <property name="toolTip">
+       <string>Parameter number 149 - EnDatEncoderTurns</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},149)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="44" column="2">
+     <widget class="QLabel" name="LabelCommandSetup">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>CommandSetup</string>
+      </property>
+     </widget>
+    </item>
+    <item row="44" column="3">
+     <widget class="PyDMLabel" name="CommandSetup">
+      <property name="toolTip">
+       <string>Parameter number 150 - CommandSetup</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Hex</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},150)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="45" column="2">
+     <widget class="QLabel" name="LabelHomePositionSet">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>HomePositionSet</string>
+      </property>
+     </widget>
+    </item>
+    <item row="45" column="3">
+     <widget class="PyDMLabel" name="HomePositionSet">
+      <property name="toolTip">
+       <string>Parameter number 166 - HomePositionSet</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},166)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="46" column="2">
+     <widget class="QLabel" name="LabelCalibrationFile2D">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>CalibrationFile2D</string>
+      </property>
+     </widget>
+    </item>
+    <item row="46" column="3">
+     <widget class="PyDMLabel" name="CalibrationFile2D">
+      <property name="toolTip">
+       <string>Parameter number 169 - CalibrationFile2D</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},169)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="47" column="2">
+     <widget class="QLabel" name="LabelFaultMaskDisableDelay">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>FaultMaskDisableDelay</string>
+      </property>
+     </widget>
+    </item>
+    <item row="47" column="3">
+     <widget class="PyDMLabel" name="FaultMaskDisableDelay">
+      <property name="toolTip">
+       <string>Parameter number 170 - FaultMaskDisableDelay</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Hex</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},170)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="48" column="2">
+     <widget class="QLabel" name="LabelDefaultCoordinatedSpeed">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>DefaultCoordinatedSpeed</string>
+      </property>
+     </widget>
+    </item>
+    <item row="48" column="3">
+     <widget class="PyDMLabel" name="DefaultCoordinatedSpeed">
+      <property name="toolTip">
+       <string>Parameter number 171 - DefaultCoordinatedSpeed</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},171)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="49" column="2">
+     <widget class="QLabel" name="LabelDefaultCoordinatedRampRate">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>DefaultCoordinatedRampRate</string>
+      </property>
+     </widget>
+    </item>
+    <item row="49" column="3">
+     <widget class="PyDMLabel" name="DefaultCoordinatedRampRate">
+      <property name="toolTip">
+       <string>Parameter number 172 - DefaultCoordinatedRampRate</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},172)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="0" column="4">
+     <widget class="QLabel" name="LabelDefaultDependentCoordinatedRampRate">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>DefaultDependentCoordinatedRampRate</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="5">
+     <widget class="PyDMLabel" name="DefaultDependentCoordinatedRampRate">
+      <property name="toolTip">
+       <string>Parameter number 173 - DefaultDependentCoordinatedRampRate</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},173)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="1" column="4">
+     <widget class="QLabel" name="LabelResolverReferenceGain">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>ResolverReferenceGain</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="5">
+     <widget class="PyDMLabel" name="ResolverReferenceGain">
+      <property name="toolTip">
+       <string>Parameter number 204 - ResolverReferenceGain</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},204)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="2" column="4">
+     <widget class="QLabel" name="LabelResolverSetup">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>ResolverSetup</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="5">
+     <widget class="PyDMLabel" name="ResolverSetup">
+      <property name="toolTip">
+       <string>Parameter number 205 - ResolverSetup</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Hex</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},205)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="3" column="4">
+     <widget class="QLabel" name="LabelResolverReferencePhase">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>ResolverReferencePhase</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="5">
+     <widget class="PyDMLabel" name="ResolverReferencePhase">
+      <property name="toolTip">
+       <string>Parameter number 206 - ResolverReferencePhase</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},206)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="4" column="4">
+     <widget class="QLabel" name="LabelSoftwareLimitSetup">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>SoftwareLimitSetup</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="5">
+     <widget class="PyDMLabel" name="SoftwareLimitSetup">
+      <property name="toolTip">
+       <string>Parameter number 210 - SoftwareLimitSetup</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Hex</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},210)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="5" column="4">
+     <widget class="QLabel" name="LabelEmulatedQuadratureDivider">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>EmulatedQuadratureDivider</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="5">
+     <widget class="PyDMLabel" name="EmulatedQuadratureDivider">
+      <property name="toolTip">
+       <string>Parameter number 213 - EmulatedQuadratureDivider</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},213)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="6" column="4">
+     <widget class="QLabel" name="LabelDefaultCoordinatedRampMode">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>DefaultCoordinatedRampMode</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="5">
+     <widget class="PyDMLabel" name="DefaultCoordinatedRampMode">
+      <property name="toolTip">
+       <string>Parameter number 249 - DefaultCoordinatedRampMode</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},249)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="7" column="4">
+     <widget class="QLabel" name="LabelDefaultCoordinatedRampTime">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>DefaultCoordinatedRampTime</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="5">
+     <widget class="PyDMLabel" name="DefaultCoordinatedRampTime">
+      <property name="toolTip">
+       <string>Parameter number 250 - DefaultCoordinatedRampTime</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},250)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="8" column="4">
+     <widget class="QLabel" name="LabelDefaultCoordinatedRampDistance">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>DefaultCoordinatedRampDistance</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="5">
+     <widget class="PyDMLabel" name="DefaultCoordinatedRampDistance">
+      <property name="toolTip">
+       <string>Parameter number 251 - DefaultCoordinatedRampDistance</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},251)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="9" column="4">
+     <widget class="QLabel" name="LabelDefaultRampMode">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>DefaultRampMode</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="5">
+     <widget class="PyDMLabel" name="DefaultRampMode">
+      <property name="toolTip">
+       <string>Parameter number 252 - DefaultRampMode</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},252)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="10" column="4">
+     <widget class="QLabel" name="LabelDefaultRampTime">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>DefaultRampTime</string>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="5">
+     <widget class="PyDMLabel" name="DefaultRampTime">
+      <property name="toolTip">
+       <string>Parameter number 253 - DefaultRampTime</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},253)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="11" column="4">
+     <widget class="QLabel" name="LabelDefaultRampDistance">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>DefaultRampDistance</string>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="5">
+     <widget class="PyDMLabel" name="DefaultRampDistance">
+      <property name="toolTip">
+       <string>Parameter number 254 - DefaultRampDistance</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},254)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="12" column="4">
+     <widget class="QLabel" name="LabelFeedbackSetup">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>FeedbackSetup</string>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="5">
+     <widget class="PyDMLabel" name="FeedbackSetup">
+      <property name="toolTip">
+       <string>Parameter number 256 - FeedbackSetup</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Hex</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},256)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="13" column="4">
+     <widget class="QLabel" name="LabelEncoderMultiplierSetup">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>EncoderMultiplierSetup</string>
+      </property>
+     </widget>
+    </item>
+    <item row="13" column="5">
+     <widget class="PyDMLabel" name="EncoderMultiplierSetup">
+      <property name="toolTip">
+       <string>Parameter number 257 - EncoderMultiplierSetup</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Hex</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},257)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="14" column="4">
+     <widget class="QLabel" name="LabelFaultSetup">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>FaultSetup</string>
+      </property>
+     </widget>
+    </item>
+    <item row="14" column="5">
+     <widget class="PyDMLabel" name="FaultSetup">
+      <property name="toolTip">
+       <string>Parameter number 258 - FaultSetup</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Hex</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},258)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="15" column="4">
+     <widget class="QLabel" name="LabelLinearAmpMaxPower">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>LinearAmpMaxPower</string>
+      </property>
+     </widget>
+    </item>
+    <item row="15" column="5">
+     <widget class="PyDMLabel" name="LinearAmpMaxPower">
+      <property name="toolTip">
+       <string>Parameter number 296 - LinearAmpMaxPower</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},296)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="16" column="4">
+     <widget class="QLabel" name="LabelLinearAmpDeratingFactor">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>LinearAmpDeratingFactor</string>
+      </property>
+     </widget>
+    </item>
+    <item row="16" column="5">
+     <widget class="PyDMLabel" name="LinearAmpDeratingFactor">
+      <property name="toolTip">
+       <string>Parameter number 297 - LinearAmpDeratingFactor</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},297)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="17" column="4">
+     <widget class="QLabel" name="LabelLinearAmpBusVoltage">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>LinearAmpBusVoltage</string>
+      </property>
+     </widget>
+    </item>
+    <item row="17" column="5">
+     <widget class="PyDMLabel" name="LinearAmpBusVoltage">
+      <property name="toolTip">
+       <string>Parameter number 298 - LinearAmpBusVoltage</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},298)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="18" column="4">
+     <widget class="QLabel" name="LabelMotorResistance">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>MotorResistance</string>
+      </property>
+     </widget>
+    </item>
+    <item row="18" column="5">
+     <widget class="PyDMLabel" name="MotorResistance">
+      <property name="toolTip">
+       <string>Parameter number 299 - MotorResistance</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},299)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="19" column="4">
+     <widget class="QLabel" name="LabelMotorBackEMFConstant">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>MotorBackEMFConstant</string>
+      </property>
+     </widget>
+    </item>
+    <item row="19" column="5">
+     <widget class="PyDMLabel" name="MotorBackEMFConstant">
+      <property name="toolTip">
+       <string>Parameter number 300 - MotorBackEMFConstant</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},300)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="20" column="4">
+     <widget class="QLabel" name="LabelGantrySetup">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>GantrySetup</string>
+      </property>
+     </widget>
+    </item>
+    <item row="20" column="5">
+     <widget class="PyDMLabel" name="GantrySetup">
+      <property name="toolTip">
+       <string>Parameter number 302 - GantrySetup</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Hex</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},302)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="21" column="4">
+     <widget class="QLabel" name="LabelRolloverMode">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>RolloverMode</string>
+      </property>
+     </widget>
+    </item>
+    <item row="21" column="5">
+     <widget class="PyDMLabel" name="RolloverMode">
+      <property name="toolTip">
+       <string>Parameter number 303 - RolloverMode</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},303)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="22" column="4">
+     <widget class="QLabel" name="LabelEmulatedQuadratureChannel">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>EmulatedQuadratureChannel</string>
+      </property>
+     </widget>
+    </item>
+    <item row="22" column="5">
+     <widget class="PyDMLabel" name="EmulatedQuadratureChannel">
+      <property name="toolTip">
+       <string>Parameter number 305 - EmulatedQuadratureChannel</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},305)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="23" column="4">
+     <widget class="QLabel" name="LabelResolverCoarseChannel">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>ResolverCoarseChannel</string>
+      </property>
+     </widget>
+    </item>
+    <item row="23" column="5">
+     <widget class="PyDMLabel" name="ResolverCoarseChannel">
+      <property name="toolTip">
+       <string>Parameter number 306 - ResolverCoarseChannel</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},306)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="24" column="4">
+     <widget class="QLabel" name="LabelResolverFeedbackRatio">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>ResolverFeedbackRatio</string>
+      </property>
+     </widget>
+    </item>
+    <item row="24" column="5">
+     <widget class="PyDMLabel" name="ResolverFeedbackRatio">
+      <property name="toolTip">
+       <string>Parameter number 307 - ResolverFeedbackRatio</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},307)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="25" column="4">
+     <widget class="QLabel" name="LabelResolverFeedbackOffset">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>ResolverFeedbackOffset</string>
+      </property>
+     </widget>
+    </item>
+    <item row="25" column="5">
+     <widget class="PyDMLabel" name="ResolverFeedbackOffset">
+      <property name="toolTip">
+       <string>Parameter number 308 - ResolverFeedbackOffset</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},308)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="26" column="4">
+     <widget class="QLabel" name="LabelBrakeEnableDelay">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>BrakeEnableDelay</string>
+      </property>
+     </widget>
+    </item>
+    <item row="26" column="5">
+     <widget class="PyDMLabel" name="BrakeEnableDelay">
+      <property name="toolTip">
+       <string>Parameter number 309 - BrakeEnableDelay</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},309)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="27" column="4">
+     <widget class="QLabel" name="LabelInPositionTime">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>InPositionTime</string>
+      </property>
+     </widget>
+    </item>
+    <item row="27" column="5">
+     <widget class="PyDMLabel" name="InPositionTime">
+      <property name="toolTip">
+       <string>Parameter number 319 - InPositionTime</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},319)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="28" column="4">
+     <widget class="QLabel" name="LabelStaticFrictionCompensation">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>StaticFrictionCompensation</string>
+      </property>
+     </widget>
+    </item>
+    <item row="28" column="5">
+     <widget class="PyDMLabel" name="StaticFrictionCompensation">
+      <property name="toolTip">
+       <string>Parameter number 324 - StaticFrictionCompensation</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},324)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="29" column="4">
+     <widget class="QLabel" name="LabelExternalFaultAnalogInput">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>ExternalFaultAnalogInput</string>
+      </property>
+     </widget>
+    </item>
+    <item row="29" column="5">
+     <widget class="PyDMLabel" name="ExternalFaultAnalogInput">
+      <property name="toolTip">
+       <string>Parameter number 424 - ExternalFaultAnalogInput</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},424)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="30" column="4">
+     <widget class="QLabel" name="LabelExternalFaultThreshold">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>ExternalFaultThreshold</string>
+      </property>
+     </widget>
+    </item>
+    <item row="30" column="5">
+     <widget class="PyDMLabel" name="ExternalFaultThreshold">
+      <property name="toolTip">
+       <string>Parameter number 425 - ExternalFaultThreshold</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},425)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="31" column="4">
+     <widget class="QLabel" name="LabelDisplayAxes">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>DisplayAxes</string>
+      </property>
+     </widget>
+    </item>
+    <item row="31" column="5">
+     <widget class="PyDMLabel" name="DisplayAxes">
+      <property name="toolTip">
+       <string>Parameter number 426 - DisplayAxes</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},426)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="32" column="4">
+     <widget class="QLabel" name="LabelDefaultDependentCoordinatedSpeed">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>DefaultDependentCoordinatedSpeed</string>
+      </property>
+     </widget>
+    </item>
+    <item row="32" column="5">
+     <widget class="PyDMLabel" name="DefaultDependentCoordinatedSpeed">
+      <property name="toolTip">
+       <string>Parameter number 427 - DefaultDependentCoordinatedSpeed</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},427)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="33" column="4">
+     <widget class="QLabel" name="LabelAnalogFilterSetup">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>AnalogFilterSetup</string>
+      </property>
+     </widget>
+    </item>
+    <item row="33" column="5">
+     <widget class="PyDMLabel" name="AnalogFilterSetup">
+      <property name="toolTip">
+       <string>Parameter number 482 - AnalogFilterSetup</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Hex</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},482)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="34" column="4">
+     <widget class="QLabel" name="LabelDefaultRampType">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>DefaultRampType</string>
+      </property>
+     </widget>
+    </item>
+    <item row="34" column="5">
+     <widget class="PyDMLabel" name="DefaultRampType">
+      <property name="toolTip">
+       <string>Parameter number 485 - DefaultRampType</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},485)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="35" column="4">
+     <widget class="QLabel" name="LabelCurrentOffsetA">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>CurrentOffsetA</string>
+      </property>
+     </widget>
+    </item>
+    <item row="35" column="5">
+     <widget class="PyDMLabel" name="CurrentOffsetA">
+      <property name="toolTip">
+       <string>Parameter number 662 - CurrentOffsetA</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},662)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="36" column="4">
+     <widget class="QLabel" name="LabelCurrentOffsetB">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>CurrentOffsetB</string>
+      </property>
+     </widget>
+    </item>
+    <item row="36" column="5">
+     <widget class="PyDMLabel" name="CurrentOffsetB">
+      <property name="toolTip">
+       <string>Parameter number 663 - CurrentOffsetB</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},663)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="37" column="4">
+     <widget class="QLabel" name="LabelFaultAckMoveOutOfLimit">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>FaultAckMoveOutOfLimit</string>
+      </property>
+     </widget>
+    </item>
+    <item row="37" column="5">
+     <widget class="PyDMLabel" name="FaultAckMoveOutOfLimit">
+      <property name="toolTip">
+       <string>Parameter number 665 - FaultAckMoveOutOfLimit</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},665)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="38" column="4">
+     <widget class="QLabel" name="LabelResoluteEncoderSetup">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>ResoluteEncoderSetup</string>
+      </property>
+     </widget>
+    </item>
+    <item row="38" column="5">
+     <widget class="PyDMLabel" name="ResoluteEncoderSetup">
+      <property name="toolTip">
+       <string>Parameter number 715 - ResoluteEncoderSetup</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Hex</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},715)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="39" column="4">
+     <widget class="QLabel" name="LabelResoluteEncoderResolution">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>ResoluteEncoderResolution</string>
+      </property>
+     </widget>
+    </item>
+    <item row="39" column="5">
+     <widget class="PyDMLabel" name="ResoluteEncoderResolution">
+      <property name="toolTip">
+       <string>Parameter number 716 - ResoluteEncoderResolution</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},716)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="40" column="4">
+     <widget class="QLabel" name="LabelResoluteEncoderUserResolution">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>ResoluteEncoderUserResolution</string>
+      </property>
+     </widget>
+    </item>
+    <item row="40" column="5">
+     <widget class="PyDMLabel" name="ResoluteEncoderUserResolution">
+      <property name="toolTip">
+       <string>Parameter number 717 - ResoluteEncoderUserResolution</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},717)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="41" column="4">
+     <widget class="QLabel" name="LabelAutofocusInput">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>AutofocusInput</string>
+      </property>
+     </widget>
+    </item>
+    <item row="41" column="5">
+     <widget class="PyDMLabel" name="AutofocusInput">
+      <property name="toolTip">
+       <string>Parameter number 721 - AutofocusInput</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},721)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="42" column="4">
+     <widget class="QLabel" name="LabelAutofocusTarget">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>AutofocusTarget</string>
+      </property>
+     </widget>
+    </item>
+    <item row="42" column="5">
+     <widget class="PyDMLabel" name="AutofocusTarget">
+      <property name="toolTip">
+       <string>Parameter number 722 - AutofocusTarget</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},722)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="43" column="4">
+     <widget class="QLabel" name="LabelAutofocusDeadband">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>AutofocusDeadband</string>
+      </property>
+     </widget>
+    </item>
+    <item row="43" column="5">
+     <widget class="PyDMLabel" name="AutofocusDeadband">
+      <property name="toolTip">
+       <string>Parameter number 723 - AutofocusDeadband</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},723)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="44" column="4">
+     <widget class="QLabel" name="LabelAutofocusGainKi">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>AutofocusGainKi</string>
+      </property>
+     </widget>
+    </item>
+    <item row="44" column="5">
+     <widget class="PyDMLabel" name="AutofocusGainKi">
+      <property name="toolTip">
+       <string>Parameter number 724 - AutofocusGainKi</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},724)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="45" column="4">
+     <widget class="QLabel" name="LabelAutofocusGainKp">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>AutofocusGainKp</string>
+      </property>
+     </widget>
+    </item>
+    <item row="45" column="5">
+     <widget class="PyDMLabel" name="AutofocusGainKp">
+      <property name="toolTip">
+       <string>Parameter number 725 - AutofocusGainKp</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},725)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="46" column="4">
+     <widget class="QLabel" name="LabelAutofocusLimitLow">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>AutofocusLimitLow</string>
+      </property>
+     </widget>
+    </item>
+    <item row="46" column="5">
+     <widget class="PyDMLabel" name="AutofocusLimitLow">
+      <property name="toolTip">
+       <string>Parameter number 726 - AutofocusLimitLow</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},726)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="47" column="4">
+     <widget class="QLabel" name="LabelAutofocusLimitHigh">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>AutofocusLimitHigh</string>
+      </property>
+     </widget>
+    </item>
+    <item row="47" column="5">
+     <widget class="PyDMLabel" name="AutofocusLimitHigh">
+      <property name="toolTip">
+       <string>Parameter number 727 - AutofocusLimitHigh</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},727)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="48" column="4">
+     <widget class="QLabel" name="LabelAutofocusSpeedClamp">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>AutofocusSpeedClamp</string>
+      </property>
+     </widget>
+    </item>
+    <item row="48" column="5">
+     <widget class="PyDMLabel" name="AutofocusSpeedClamp">
+      <property name="toolTip">
+       <string>Parameter number 728 - AutofocusSpeedClamp</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},728)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="49" column="4">
+     <widget class="QLabel" name="LabelAutofocusHoldInput">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>AutofocusHoldInput</string>
+      </property>
+     </widget>
+    </item>
+    <item row="49" column="5">
+     <widget class="PyDMLabel" name="AutofocusHoldInput">
+      <property name="toolTip">
+       <string>Parameter number 729 - AutofocusHoldInput</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},729)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="0" column="6">
+     <widget class="QLabel" name="LabelAutofocusSetup">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>AutofocusSetup</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="7">
+     <widget class="PyDMLabel" name="AutofocusSetup">
+      <property name="toolTip">
+       <string>Parameter number 730 - AutofocusSetup</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Hex</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},730)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="1" column="6">
+     <widget class="QLabel" name="LabelExternalSyncFrequency">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>ExternalSyncFrequency</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="7">
+     <widget class="PyDMLabel" name="ExternalSyncFrequency">
+      <property name="toolTip">
+       <string>Parameter number 731 - ExternalSyncFrequency</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},731)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="2" column="6">
+     <widget class="QLabel" name="LabelAutofocusInitialRampTime">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>AutofocusInitialRampTime</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="7">
+     <widget class="PyDMLabel" name="AutofocusInitialRampTime">
+      <property name="toolTip">
+       <string>Parameter number 763 - AutofocusInitialRampTime</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},763)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="3" column="6">
+     <widget class="QLabel" name="LabelSoftwareExternalFaultInput">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>SoftwareExternalFaultInput</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="7">
+     <widget class="PyDMLabel" name="SoftwareExternalFaultInput">
+      <property name="toolTip">
+       <string>Parameter number 765 - SoftwareExternalFaultInput</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},765)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="4" column="6">
+     <widget class="QLabel" name="LabelAutofocusGainKi2">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>AutofocusGainKi2</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="7">
+     <widget class="PyDMLabel" name="AutofocusGainKi2">
+      <property name="toolTip">
+       <string>Parameter number 769 - AutofocusGainKi2</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},769)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="5" column="6">
+     <widget class="QLabel" name="LabelEnDatEncoderIncrementalResolution">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>EnDatEncoderIncrementalResolution</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="7">
+     <widget class="PyDMLabel" name="EnDatEncoderIncrementalResolution">
+      <property name="toolTip">
+       <string>Parameter number 770 - EnDatEncoderIncrementalResolution</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},770)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="6" column="6">
+     <widget class="QLabel" name="LabelMarkerSearchThreshold">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>MarkerSearchThreshold</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="7">
+     <widget class="PyDMLabel" name="MarkerSearchThreshold">
+      <property name="toolTip">
+       <string>Parameter number 771 - MarkerSearchThreshold</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},771)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="7" column="6">
+     <widget class="QLabel" name="LabelVelocityCommandThresholdBeforeHome">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>VelocityCommandThresholdBeforeHome</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="7">
+     <widget class="PyDMLabel" name="VelocityCommandThresholdBeforeHome">
+      <property name="toolTip">
+       <string>Parameter number 781 - VelocityCommandThresholdBeforeHome</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},781)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="8" column="6">
+     <widget class="QLabel" name="LabelInPosition2Distance">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>InPosition2Distance</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="7">
+     <widget class="PyDMLabel" name="InPosition2Distance">
+      <property name="toolTip">
+       <string>Parameter number 789 - InPosition2Distance</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},789)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="9" column="6">
+     <widget class="QLabel" name="LabelInPosition2Time">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>InPosition2Time</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="7">
+     <widget class="PyDMLabel" name="InPosition2Time">
+      <property name="toolTip">
+       <string>Parameter number 790 - InPosition2Time</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},790)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="10" column="6">
+     <widget class="QLabel" name="LabelStepperRunningCurrentDelay">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>StepperRunningCurrentDelay</string>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="7">
+     <widget class="PyDMLabel" name="StepperRunningCurrentDelay">
+      <property name="toolTip">
+       <string>Parameter number 791 - StepperRunningCurrentDelay</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},791)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="11" column="6">
+     <widget class="QLabel" name="LabelExternalVelocityAverageTime">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>ExternalVelocityAverageTime</string>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="7">
+     <widget class="PyDMLabel" name="ExternalVelocityAverageTime">
+      <property name="toolTip">
+       <string>Parameter number 792 - ExternalVelocityAverageTime</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},792)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="12" column="6">
+     <widget class="QLabel" name="LabelAbsoluteFeedbackOffset">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>AbsoluteFeedbackOffset</string>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="7">
+     <widget class="PyDMLabel" name="AbsoluteFeedbackOffset">
+      <property name="toolTip">
+       <string>Parameter number 802 - AbsoluteFeedbackOffset</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},802)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="13" column="6">
+     <widget class="QLabel" name="LabelCapSensorFilterLength">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>CapSensorFilterLength</string>
+      </property>
+     </widget>
+    </item>
+    <item row="13" column="7">
+     <widget class="PyDMLabel" name="CapSensorFilterLength">
+      <property name="toolTip">
+       <string>Parameter number 804 - CapSensorFilterLength</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},804)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="14" column="6">
+     <widget class="QLabel" name="LabelEnhancedTrackingScale">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>EnhancedTrackingScale</string>
+      </property>
+     </widget>
+    </item>
+    <item row="14" column="7">
+     <widget class="PyDMLabel" name="EnhancedTrackingScale">
+      <property name="toolTip">
+       <string>Parameter number 805 - EnhancedTrackingScale</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},805)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="15" column="6">
+     <widget class="QLabel" name="LabelEnhancedTrackingBandwidth">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>EnhancedTrackingBandwidth</string>
+      </property>
+     </widget>
+    </item>
+    <item row="15" column="7">
+     <widget class="PyDMLabel" name="EnhancedTrackingBandwidth">
+      <property name="toolTip">
+       <string>Parameter number 806 - EnhancedTrackingBandwidth</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},806)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="16" column="6">
+     <widget class="QLabel" name="LabelAnalog0InputOffset">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>Analog0InputOffset</string>
+      </property>
+     </widget>
+    </item>
+    <item row="16" column="7">
+     <widget class="PyDMLabel" name="Analog0InputOffset">
+      <property name="toolTip">
+       <string>Parameter number 807 - Analog0InputOffset</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},807)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="17" column="6">
+     <widget class="QLabel" name="LabelAnalog1InputOffset">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>Analog1InputOffset</string>
+      </property>
+     </widget>
+    </item>
+    <item row="17" column="7">
+     <widget class="PyDMLabel" name="Analog1InputOffset">
+      <property name="toolTip">
+       <string>Parameter number 808 - Analog1InputOffset</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},808)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="18" column="6">
+     <widget class="QLabel" name="LabelAnalog2InputOffset">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>Analog2InputOffset</string>
+      </property>
+     </widget>
+    </item>
+    <item row="18" column="7">
+     <widget class="PyDMLabel" name="Analog2InputOffset">
+      <property name="toolTip">
+       <string>Parameter number 809 - Analog2InputOffset</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},809)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="19" column="6">
+     <widget class="QLabel" name="LabelAnalog3InputOffset">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>Analog3InputOffset</string>
+      </property>
+     </widget>
+    </item>
+    <item row="19" column="7">
+     <widget class="PyDMLabel" name="Analog3InputOffset">
+      <property name="toolTip">
+       <string>Parameter number 810 - Analog3InputOffset</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},810)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="20" column="6">
+     <widget class="QLabel" name="LabelEnhancedTrackingSetup">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>EnhancedTrackingSetup</string>
+      </property>
+     </widget>
+    </item>
+    <item row="20" column="7">
+     <widget class="PyDMLabel" name="EnhancedTrackingSetup">
+      <property name="toolTip">
+       <string>Parameter number 811 - EnhancedTrackingSetup</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Hex</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},811)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="21" column="6">
+     <widget class="QLabel" name="LabelEncoderMarkerAlignment">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>EncoderMarkerAlignment</string>
+      </property>
+     </widget>
+    </item>
+    <item row="21" column="7">
+     <widget class="PyDMLabel" name="EncoderMarkerAlignment">
+      <property name="toolTip">
+       <string>Parameter number 814 - EncoderMarkerAlignment</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},814)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="22" column="6">
+     <widget class="QLabel" name="LabelEncoderRadiusThresholdLow">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>EncoderRadiusThresholdLow</string>
+      </property>
+     </widget>
+    </item>
+    <item row="22" column="7">
+     <widget class="PyDMLabel" name="EncoderRadiusThresholdLow">
+      <property name="toolTip">
+       <string>Parameter number 815 - EncoderRadiusThresholdLow</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},815)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="23" column="6">
+     <widget class="QLabel" name="LabelEncoderRadiusThresholdHigh">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>EncoderRadiusThresholdHigh</string>
+      </property>
+     </widget>
+    </item>
+    <item row="23" column="7">
+     <widget class="PyDMLabel" name="EncoderRadiusThresholdHigh">
+      <property name="toolTip">
+       <string>Parameter number 816 - EncoderRadiusThresholdHigh</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},816)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="24" column="6">
+     <widget class="QLabel" name="LabelFeedforwardAdvance">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>FeedforwardAdvance</string>
+      </property>
+     </widget>
+    </item>
+    <item row="24" column="7">
+     <widget class="PyDMLabel" name="FeedforwardAdvance">
+      <property name="toolTip">
+       <string>Parameter number 824 - FeedforwardAdvance</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},824)</string>
+      </property>
+     </widget>
+    </item>
+
+
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PyDMLabel</class>
+   <extends>QLabel</extends>
+   <header>pydm.widgets.label</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
+

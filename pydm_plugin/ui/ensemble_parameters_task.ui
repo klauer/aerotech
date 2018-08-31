@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1194</width>
+    <height>948</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="QScrollArea" name="scrollArea">
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="scrollAreaWidgetContents">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1000</width>
+        <height>1000</height>
+       </rect>
+      </property>
+     <layout class="QGridLayout" name="gridLayout">
+
+
+    <item row="0" column="0">
+     <widget class="QLabel" name="LabelTaskExecutionSetup">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>TaskExecutionSetup</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="PyDMLabel" name="TaskExecutionSetup">
+      <property name="toolTip">
+       <string>Parameter number 113 - TaskExecutionSetup</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Hex</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},113)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="1" column="0">
+     <widget class="QLabel" name="LabelTaskErrorAbortAxes">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>TaskErrorAbortAxes</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="PyDMLabel" name="TaskErrorAbortAxes">
+      <property name="toolTip">
+       <string>Parameter number 127 - TaskErrorAbortAxes</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},127)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="2" column="0">
+     <widget class="QLabel" name="LabelTaskTerminationAxes">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>TaskTerminationAxes</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="PyDMLabel" name="TaskTerminationAxes">
+      <property name="toolTip">
+       <string>Parameter number 167 - TaskTerminationAxes</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},167)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="3" column="0">
+     <widget class="QLabel" name="LabelTaskStopAbortAxes">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>TaskStopAbortAxes</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="PyDMLabel" name="TaskStopAbortAxes">
+      <property name="toolTip">
+       <string>Parameter number 168 - TaskStopAbortAxes</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},168)</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <item row="4" column="0">
+     <widget class="QLabel" name="LabelAutoRunProgram">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="text">
+       <string>AutoRunProgram</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="PyDMLabel" name="AutoRunProgram">
+      <property name="toolTip">
+       <string>Parameter number 118 - AutoRunProgram</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="whatsThis"><string/>
+      </property>
+      <property name="displayFormat" stdset="0">
+       <enum>PyDMLabel::Default</enum>
+      </property>
+      <property name="channel" stdset="0">
+       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},118)</string>
+      </property>
+     </widget>
+    </item>
+
+
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PyDMLabel</class>
+   <extends>QLabel</extends>
+   <header>pydm.widgets.label</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
+
