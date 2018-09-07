@@ -119,10 +119,14 @@ class PollThread(QThread):
         loop = self.client.loop
         failed_rate = self.poll_rate_ms * 2
         while not self.isInterruptionRequested():
-            with self.client.lock:
-                comm = self.client.comm
+            if self.client.comm is None:
+                self.new_severity_signal.emit(Severity.INVALID)
+                self.msleep(failed_rate)
+                continue
 
+            with self.client.lock:
                 sleep_ms = failed_rate
+                comm = self.client.comm
                 if comm is None:
                     self.new_severity_signal.emit(Severity.INVALID)
                 else:
@@ -208,29 +212,35 @@ class WriteOnlyParameter(QThread):
         self.connection = connection
         self.client = client
         self.parameter = parameter
+        self.to_write = []
 
     def run(self):
-        comm = self.client.comm
-
-        if comm is None:
-            return
-
         loop = self.client.loop
-        with self.client.lock:
-            cmd = self.parameter.format(value=self.to_write)
-            coro = comm.write_read(cmd)
-            try:
-                result = loop.run_until_complete(coro)
-            except Exception as ex:
-                logger.exception('Write failed: %r', cmd)
-                self.new_severity_signal.emit(Severity.MAJOR)
-            else:
-                logger.info('Write result: %r => %s', cmd, result)
-                self.new_severity_signal.emit(Severity.NO_ALARM)
+        while self.to_write:
+            comm = self.client.comm
+            if comm is None:
+                logger.warning('Not writing %s; disconnected', self.parameter)
+                self.to_write.clear()
+                break
+
+            with self.client.lock:
+                value = self.to_write.pop(0)
+                cmd = self.parameter.format(value=value)
+                coro = comm.write_read(cmd)
+                try:
+                    result = loop.run_until_complete(coro)
+                except Exception as ex:
+                    logger.exception('Write failed: %r', cmd)
+                    self.new_severity_signal.emit(Severity.MAJOR)
+                    self.to_write.clear()
+                    break
+                else:
+                    logger.info('Write result: %r => %s', cmd, result)
+                    self.new_severity_signal.emit(Severity.NO_ALARM)
 
     def write(self, value):
         logger.debug('%s write: %s', self.parameter, value)
-        self.to_write = value
+        self.to_write.append(value)
         self.start()
 
 
