@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form</class>
- <widget class="QWidget" name="Form">
+ <class>EnsembleAxis</class>
+ <widget class="QWidget" name="EnsembleAxis">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -13,11 +13,11 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
+  <layout class="QVBoxLayout" name="verticalLayout_3">
    <item>
-    <layout class="QGridLayout" name="PositionLayout">
-     <item row="4" column="2">
-      <widget class="QLabel" name="label_3">
+    <layout class="QGridLayout" name="TopLayout">
+     <item row="4" column="1">
+      <widget class="QLabel" name="AINLabel">
        <property name="font">
         <font>
          <weight>75</weight>
@@ -25,15 +25,15 @@
         </font>
        </property>
        <property name="text">
-        <string>Velocity</string>
+        <string>Analog inputs</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
        </property>
       </widget>
      </item>
-     <item row="5" column="4">
-      <widget class="PyDMLabel" name="PyDMLabel">
+     <item row="4" column="2">
+      <widget class="PyDMLabel" name="AIN0">
        <property name="toolTip">
         <string/>
        </property>
@@ -56,17 +56,140 @@
         <bool>true</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ensemble://${host}:${port}@${rate}/IFBK(${axis})</string>
+        <string>ensemble://${host}:${port}@${rate}/AIN(${axis},0)</string>
        </property>
       </widget>
      </item>
-     <item row="5" column="5">
-      <widget class="PyDMRelatedDisplayButton" name="PyDMRelatedDisplayButton_2">
-       <property name="toolTip">
-        <string/>
-       </property>
-       <property name="whatsThis">
-        <string>
+     <item row="4" column="0">
+      <layout class="QVBoxLayout" name="EnableDisableLayout">
+       <item>
+        <widget class="PyDMPushButton" name="EnableButton">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="whatsThis">
+          <string>
+    Basic PushButton to send a fixed value.
+
+    The PyDMPushButton is meant to hold a specific value, and send that value
+    to a channel when it is clicked, much like the MessageButton does in EDM.
+    The PyDMPushButton works in two different modes of operation, first, a
+    fixed value can be given to the :attr:`.pressValue` attribute, whenever the
+    button is clicked a signal containing this value will be sent to the
+    connected channel. This is the default behavior of the button. However, if
+    the :attr:`.relativeChange` is set to True, the fixed value will be added
+    to the current value of the channel. This means that the button will
+    increment a channel by a fixed amount with every click, a consistent
+    relative move
+
+    Parameters
+    ----------
+    parent : QObject, optional
+        Parent of PyDMPushButton
+
+    label : str, optional
+        String to place on button
+
+    icon : QIcon, optional
+        An Icon to display on the PyDMPushButton
+
+    pressValue : int, float, str
+        Value to be sent when the button is clicked
+
+    relative : bool, optional
+        Choice to have the button perform a relative put, instead of always
+        setting to an absolute value
+
+    init_channel : str, optional
+        ID of channel to manipulate
+
+    </string>
+         </property>
+         <property name="text">
+          <string>Enable</string>
+         </property>
+         <property name="precisionFromPV" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="channel" stdset="0">
+          <string>ensemble://${host}:${port}/ENABLE ${axis}</string>
+         </property>
+         <property name="pressValue" stdset="0">
+          <string>1</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMPushButton" name="DisableButton">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="whatsThis">
+          <string>
+    Basic PushButton to send a fixed value.
+
+    The PyDMPushButton is meant to hold a specific value, and send that value
+    to a channel when it is clicked, much like the MessageButton does in EDM.
+    The PyDMPushButton works in two different modes of operation, first, a
+    fixed value can be given to the :attr:`.pressValue` attribute, whenever the
+    button is clicked a signal containing this value will be sent to the
+    connected channel. This is the default behavior of the button. However, if
+    the :attr:`.relativeChange` is set to True, the fixed value will be added
+    to the current value of the channel. This means that the button will
+    increment a channel by a fixed amount with every click, a consistent
+    relative move
+
+    Parameters
+    ----------
+    parent : QObject, optional
+        Parent of PyDMPushButton
+
+    label : str, optional
+        String to place on button
+
+    icon : QIcon, optional
+        An Icon to display on the PyDMPushButton
+
+    pressValue : int, float, str
+        Value to be sent when the button is clicked
+
+    relative : bool, optional
+        Choice to have the button perform a relative put, instead of always
+        setting to an absolute value
+
+    init_channel : str, optional
+        ID of channel to manipulate
+
+    </string>
+         </property>
+         <property name="text">
+          <string>Disable</string>
+         </property>
+         <property name="alarmSensitiveBorder" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="precisionFromPV" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="channel" stdset="0">
+          <string>ensemble://${host}:${port}/DISABLE ${axis}</string>
+         </property>
+         <property name="pressValue" stdset="0">
+          <string>1</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="2" column="4" rowspan="3">
+      <layout class="QVBoxLayout" name="ParameterLayout">
+       <item>
+        <widget class="PyDMRelatedDisplayButton" name="AxisParameters">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="whatsThis">
+          <string>
     A QPushButton capable of opening a new Display at the same of at a
     new window.
 
@@ -78,88 +201,123 @@
     filename : str, optional
         The file to be opened
     </string>
-       </property>
-       <property name="text">
-        <string>System Parameters</string>
-       </property>
-       <property name="displayFilename" stdset="0">
-        <string>ensemble_parameters_system.ui</string>
-       </property>
-       <property name="macros" stdset="0">
-        <string>{&quot;rate&quot;: 10}</string>
-       </property>
-       <property name="openInNewWindow" stdset="0">
-        <bool>false</bool>
-       </property>
-      </widget>
+         </property>
+         <property name="text">
+          <string>Axis Parameters</string>
+         </property>
+         <property name="displayFilename" stdset="0">
+          <string>ensemble_parameters_wirescanner.ui</string>
+         </property>
+         <property name="macros" stdset="0">
+          <string>{&quot;rate&quot;: 10}</string>
+         </property>
+         <property name="openInNewWindow" stdset="0">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMRelatedDisplayButton" name="SystemParameters">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="whatsThis">
+          <string>
+    A QPushButton capable of opening a new Display at the same of at a
+    new window.
+
+    Parameters
+    ----------
+    init_channel : str, optional
+        The channel to be used by the widget.
+
+    filename : str, optional
+        The file to be opened
+    </string>
+         </property>
+         <property name="text">
+          <string>System Parameters</string>
+         </property>
+         <property name="displayFilename" stdset="0">
+          <string>ensemble_parameters_system.ui</string>
+         </property>
+         <property name="macros" stdset="0">
+          <string>{&quot;rate&quot;: 10}</string>
+         </property>
+         <property name="openInNewWindow" stdset="0">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMRelatedDisplayButton" name="TaskParameters">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="whatsThis">
+          <string>
+    A QPushButton capable of opening a new Display at the same of at a
+    new window.
+
+    Parameters
+    ----------
+    init_channel : str, optional
+        The channel to be used by the widget.
+
+    filename : str, optional
+        The file to be opened
+    </string>
+         </property>
+         <property name="text">
+          <string>Task Parameters</string>
+         </property>
+         <property name="displayFilename" stdset="0">
+          <string>ensemble_parameters_task.ui</string>
+         </property>
+         <property name="macros" stdset="0">
+          <string>{&quot;rate&quot;: 10}</string>
+         </property>
+         <property name="openInNewWindow" stdset="0">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PyDMRelatedDisplayButton" name="AllParameters">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="whatsThis">
+          <string>
+    A QPushButton capable of opening a new Display at the same of at a
+    new window.
+
+    Parameters
+    ----------
+    init_channel : str, optional
+        The channel to be used by the widget.
+
+    filename : str, optional
+        The file to be opened
+    </string>
+         </property>
+         <property name="text">
+          <string>All Parameters</string>
+         </property>
+         <property name="displayFilename" stdset="0">
+          <string>ensemble_parameters_all.ui</string>
+         </property>
+         <property name="macros" stdset="0">
+          <string>{&quot;rate&quot;: 10}</string>
+         </property>
+         <property name="openInNewWindow" stdset="0">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </item>
-     <item row="4" column="4">
-      <widget class="PyDMLabel" name="VelocityFeedback">
-       <property name="toolTip">
-        <string/>
-       </property>
-       <property name="whatsThis">
-        <string/>
-       </property>
-       <property name="text">
-        <string>...</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-       <property name="precisionFromPV" stdset="0">
-        <bool>false</bool>
-       </property>
-       <property name="precision" stdset="0">
-        <number>3</number>
-       </property>
-       <property name="channel" stdset="0">
-        <string>ensemble://${host}:${port}@${rate}/VFBK(${axis})</string>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="2">
-      <widget class="QLabel" name="label_4">
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>Current</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="3">
-      <widget class="PyDMLabel" name="CommandedPosition">
-       <property name="toolTip">
-        <string/>
-       </property>
-       <property name="whatsThis">
-        <string/>
-       </property>
-       <property name="text">
-        <string>...</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-       <property name="precisionFromPV" stdset="0">
-        <bool>false</bool>
-       </property>
-       <property name="precision" stdset="0">
-        <number>3</number>
-       </property>
-       <property name="channel" stdset="0">
-        <string>ensemble://${host}:${port}@${rate}/CMDPOS(${axis})</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="5">
+     <item row="0" column="4">
       <widget class="PyDMRelatedDisplayButton" name="PyDMRelatedDisplayButton_8">
        <property name="toolTip">
         <string/>
@@ -192,349 +350,7 @@
        </property>
       </widget>
      </item>
-     <item row="6" column="4">
-      <widget class="PyDMPushButton" name="PyDMPushButton">
-       <property name="toolTip">
-        <string/>
-       </property>
-       <property name="whatsThis">
-        <string>
-    Basic PushButton to send a fixed value.
-
-    The PyDMPushButton is meant to hold a specific value, and send that value
-    to a channel when it is clicked, much like the MessageButton does in EDM.
-    The PyDMPushButton works in two different modes of operation, first, a
-    fixed value can be given to the :attr:`.pressValue` attribute, whenever the
-    button is clicked a signal containing this value will be sent to the
-    connected channel. This is the default behavior of the button. However, if
-    the :attr:`.relativeChange` is set to True, the fixed value will be added
-    to the current value of the channel. This means that the button will
-    increment a channel by a fixed amount with every click, a consistent
-    relative move
-
-    Parameters
-    ----------
-    parent : QObject, optional
-        Parent of PyDMPushButton
-
-    label : str, optional
-        String to place on button
-
-    icon : QIcon, optional
-        An Icon to display on the PyDMPushButton
-
-    pressValue : int, float, str
-        Value to be sent when the button is clicked
-
-    relative : bool, optional
-        Choice to have the button perform a relative put, instead of always
-        setting to an absolute value
-
-    init_channel : str, optional
-        ID of channel to manipulate
-
-    </string>
-       </property>
-       <property name="text">
-        <string>Enable</string>
-       </property>
-       <property name="precisionFromPV" stdset="0">
-        <bool>false</bool>
-       </property>
-       <property name="channel" stdset="0">
-        <string>ensemble://${host}:${port}/ENABLE ${axis}</string>
-       </property>
-       <property name="pressValue" stdset="0">
-        <string>1</string>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="0">
-      <widget class="PyDMByteIndicator" name="StatusByte2_2">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="toolTip">
-        <string/>
-       </property>
-       <property name="whatsThis">
-        <string>
-    Widget for graphical representation of bits from an integer number
-    with support for Channels and more from PyDM
-
-    Parameters
-    ----------
-    parent : QWidget
-        The parent widget for the Label
-    init_channel : str, optional
-        The channel to be used by the widget.
-    </string>
-       </property>
-       <property name="channel" stdset="0">
-        <string>ensemble://${host}:${port}@${rate}/AXISSTATUS ${axis}</string>
-       </property>
-       <property name="orientation" stdset="0">
-        <enum>Qt::Vertical</enum>
-       </property>
-       <property name="circles" stdset="0">
-        <bool>true</bool>
-       </property>
-       <property name="numBits" stdset="0">
-        <number>1</number>
-       </property>
-       <property name="shift" stdset="0">
-        <number>22</number>
-       </property>
-       <property name="labels" stdset="0">
-        <stringlist>
-         <string>High (CW) Limit</string>
-        </stringlist>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="2">
-      <widget class="QLabel" name="label">
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>Position</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="3">
-      <widget class="PyDMLabel" name="PyDMLabel_3">
-       <property name="toolTip">
-        <string/>
-       </property>
-       <property name="whatsThis">
-        <string/>
-       </property>
-       <property name="text">
-        <string>...</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-       <property name="precisionFromPV" stdset="0">
-        <bool>false</bool>
-       </property>
-       <property name="precision" stdset="0">
-        <number>3</number>
-       </property>
-       <property name="showUnits" stdset="0">
-        <bool>true</bool>
-       </property>
-       <property name="channel" stdset="0">
-        <string>ensemble://${host}:${port}@${rate}/ICMD(${axis})</string>
-       </property>
-      </widget>
-     </item>
-     <item row="6" column="5">
-      <widget class="PyDMRelatedDisplayButton" name="PyDMRelatedDisplayButton_4">
-       <property name="toolTip">
-        <string/>
-       </property>
-       <property name="whatsThis">
-        <string>
-    A QPushButton capable of opening a new Display at the same of at a
-    new window.
-
-    Parameters
-    ----------
-    init_channel : str, optional
-        The channel to be used by the widget.
-
-    filename : str, optional
-        The file to be opened
-    </string>
-       </property>
-       <property name="text">
-        <string>Task Parameters</string>
-       </property>
-       <property name="displayFilename" stdset="0">
-        <string>ensemble_parameters_task.ui</string>
-       </property>
-       <property name="macros" stdset="0">
-        <string>{&quot;rate&quot;: 10}</string>
-       </property>
-       <property name="openInNewWindow" stdset="0">
-        <bool>false</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="4">
-      <widget class="PyDMLabel" name="FeedbackPosition">
-       <property name="toolTip">
-        <string/>
-       </property>
-       <property name="whatsThis">
-        <string/>
-       </property>
-       <property name="text">
-        <string>...</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-       <property name="precisionFromPV" stdset="0">
-        <bool>false</bool>
-       </property>
-       <property name="precision" stdset="0">
-        <number>3</number>
-       </property>
-       <property name="channel" stdset="0">
-        <string>ensemble://${host}:${port}@${rate}/PFBKPROG(${axis})</string>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="5">
-      <widget class="PyDMRelatedDisplayButton" name="PyDMRelatedDisplayButton_3">
-       <property name="toolTip">
-        <string/>
-       </property>
-       <property name="whatsThis">
-        <string>
-    A QPushButton capable of opening a new Display at the same of at a
-    new window.
-
-    Parameters
-    ----------
-    init_channel : str, optional
-        The channel to be used by the widget.
-
-    filename : str, optional
-        The file to be opened
-    </string>
-       </property>
-       <property name="text">
-        <string>Axis Parameters</string>
-       </property>
-       <property name="displayFilename" stdset="0">
-        <string>ensemble_parameters_wirescanner.ui</string>
-       </property>
-       <property name="macros" stdset="0">
-        <string>{&quot;rate&quot;: 10}</string>
-       </property>
-       <property name="openInNewWindow" stdset="0">
-        <bool>false</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="0">
-      <widget class="PyDMByteIndicator" name="StatusByte2_3">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="toolTip">
-        <string/>
-       </property>
-       <property name="whatsThis">
-        <string>
-    Widget for graphical representation of bits from an integer number
-    with support for Channels and more from PyDM
-
-    Parameters
-    ----------
-    parent : QWidget
-        The parent widget for the Label
-    init_channel : str, optional
-        The channel to be used by the widget.
-    </string>
-       </property>
-       <property name="channel" stdset="0">
-        <string>ensemble://${host}:${port}@${rate}/AXISSTATUS ${axis}</string>
-       </property>
-       <property name="orientation" stdset="0">
-        <enum>Qt::Vertical</enum>
-       </property>
-       <property name="circles" stdset="0">
-        <bool>true</bool>
-       </property>
-       <property name="numBits" stdset="0">
-        <number>1</number>
-       </property>
-       <property name="shift" stdset="0">
-        <number>23</number>
-       </property>
-       <property name="labels" stdset="0">
-        <stringlist>
-         <string>Low (CCW) Limit</string>
-        </stringlist>
-       </property>
-      </widget>
-     </item>
-     <item row="6" column="3">
-      <widget class="PyDMPushButton" name="PyDMPushButton_2">
-       <property name="toolTip">
-        <string/>
-       </property>
-       <property name="whatsThis">
-        <string>
-    Basic PushButton to send a fixed value.
-
-    The PyDMPushButton is meant to hold a specific value, and send that value
-    to a channel when it is clicked, much like the MessageButton does in EDM.
-    The PyDMPushButton works in two different modes of operation, first, a
-    fixed value can be given to the :attr:`.pressValue` attribute, whenever the
-    button is clicked a signal containing this value will be sent to the
-    connected channel. This is the default behavior of the button. However, if
-    the :attr:`.relativeChange` is set to True, the fixed value will be added
-    to the current value of the channel. This means that the button will
-    increment a channel by a fixed amount with every click, a consistent
-    relative move
-
-    Parameters
-    ----------
-    parent : QObject, optional
-        Parent of PyDMPushButton
-
-    label : str, optional
-        String to place on button
-
-    icon : QIcon, optional
-        An Icon to display on the PyDMPushButton
-
-    pressValue : int, float, str
-        Value to be sent when the button is clicked
-
-    relative : bool, optional
-        Choice to have the button perform a relative put, instead of always
-        setting to an absolute value
-
-    init_channel : str, optional
-        ID of channel to manipulate
-
-    </string>
-       </property>
-       <property name="text">
-        <string>Disable</string>
-       </property>
-       <property name="alarmSensitiveBorder" stdset="0">
-        <bool>false</bool>
-       </property>
-       <property name="precisionFromPV" stdset="0">
-        <bool>false</bool>
-       </property>
-       <property name="channel" stdset="0">
-        <string>ensemble://${host}:${port}/DISABLE ${axis}</string>
-       </property>
-       <property name="pressValue" stdset="0">
-        <string>1</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
+     <item row="0" column="0">
       <widget class="PyDMByteIndicator" name="EnableIndicator">
        <property name="minimumSize">
         <size>
@@ -586,10 +402,307 @@
        </property>
       </widget>
      </item>
+     <item row="4" column="3">
+      <widget class="PyDMLabel" name="AIN1">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="whatsThis">
+        <string/>
+       </property>
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="precisionFromPV" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="precision" stdset="0">
+        <number>3</number>
+       </property>
+       <property name="showUnits" stdset="0">
+        <bool>true</bool>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ensemble://${host}:${port}@${rate}/AIN(${axis},1)</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="PyDMByteIndicator" name="HighLim">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="whatsThis">
+        <string>
+    Widget for graphical representation of bits from an integer number
+    with support for Channels and more from PyDM
+
+    Parameters
+    ----------
+    parent : QWidget
+        The parent widget for the Label
+    init_channel : str, optional
+        The channel to be used by the widget.
+    </string>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ensemble://${host}:${port}@${rate}/AXISSTATUS ${axis}</string>
+       </property>
+       <property name="orientation" stdset="0">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="circles" stdset="0">
+        <bool>true</bool>
+       </property>
+       <property name="numBits" stdset="0">
+        <number>1</number>
+       </property>
+       <property name="shift" stdset="0">
+        <number>22</number>
+       </property>
+       <property name="labels" stdset="0">
+        <stringlist>
+         <string>High (CW) Limit</string>
+        </stringlist>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="PositionLabel">
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Position</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="3">
+      <widget class="PyDMLabel" name="CurrentReadback">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="whatsThis">
+        <string/>
+       </property>
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="precisionFromPV" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="precision" stdset="0">
+        <number>3</number>
+       </property>
+       <property name="showUnits" stdset="0">
+        <bool>true</bool>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ensemble://${host}:${port}@${rate}/IFBK(${axis})</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="PyDMLabel" name="FeedbackPosition">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="whatsThis">
+        <string/>
+       </property>
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="precisionFromPV" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="precision" stdset="0">
+        <number>3</number>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ensemble://${host}:${port}@${rate}/PFBKPROG(${axis})</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="VelocityLabel">
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Velocity</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="PyDMLabel" name="CommandedPosition">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="whatsThis">
+        <string/>
+       </property>
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="precisionFromPV" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="precision" stdset="0">
+        <number>3</number>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ensemble://${host}:${port}@${rate}/CMDPOS(${axis})</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="2">
+      <widget class="PyDMLabel" name="CurrentSetpoint">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="whatsThis">
+        <string/>
+       </property>
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="precisionFromPV" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="precision" stdset="0">
+        <number>3</number>
+       </property>
+       <property name="showUnits" stdset="0">
+        <bool>true</bool>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ensemble://${host}:${port}@${rate}/ICMD(${axis})</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLabel" name="CurrentLabel">
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Current</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="PyDMLabel" name="VelocityFeedback">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="whatsThis">
+        <string/>
+       </property>
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="precisionFromPV" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="precision" stdset="0">
+        <number>3</number>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ensemble://${host}:${port}@${rate}/VFBK(${axis})</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="PyDMByteIndicator" name="LowLim">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="whatsThis">
+        <string>
+    Widget for graphical representation of bits from an integer number
+    with support for Channels and more from PyDM
+
+    Parameters
+    ----------
+    parent : QWidget
+        The parent widget for the Label
+    init_channel : str, optional
+        The channel to be used by the widget.
+    </string>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ensemble://${host}:${port}@${rate}/AXISSTATUS ${axis}</string>
+       </property>
+       <property name="orientation" stdset="0">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="circles" stdset="0">
+        <bool>true</bool>
+       </property>
+       <property name="numBits" stdset="0">
+        <number>1</number>
+       </property>
+       <property name="shift" stdset="0">
+        <number>23</number>
+       </property>
+       <property name="labels" stdset="0">
+        <stringlist>
+         <string>Low (CCW) Limit</string>
+        </stringlist>
+       </property>
+      </widget>
+     </item>
     </layout>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_3">
+    <layout class="QHBoxLayout" name="AxisStatusFaultLayout">
      <item>
       <layout class="QVBoxLayout" name="StatusLayout">
        <item>
@@ -603,7 +716,7 @@
         </widget>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout">
+        <layout class="QHBoxLayout" name="StatusBytesLayout">
          <item>
           <widget class="PyDMByteIndicator" name="StatusByte0">
            <property name="font">
@@ -754,7 +867,7 @@
         </widget>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <layout class="QHBoxLayout" name="FaultBytesLayout">
          <item>
           <widget class="PyDMByteIndicator" name="FaultByte0">
            <property name="font">
@@ -885,6 +998,7 @@
     </layout>
    </item>
   </layout>
+  <zorder></zorder>
  </widget>
  <customwidgets>
   <customwidget>
