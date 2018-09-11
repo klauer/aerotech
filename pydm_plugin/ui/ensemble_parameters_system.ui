@@ -61,7 +61,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},156)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},156)</string>
       </property>
      </widget>
     </item>
@@ -97,7 +97,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},124)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},124)</string>
       </property>
      </widget>
     </item>
@@ -133,7 +133,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},125)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},125)</string>
       </property>
      </widget>
     </item>
@@ -169,7 +169,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},126)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},126)</string>
       </property>
      </widget>
     </item>
@@ -205,7 +205,7 @@
        <enum>PyDMLabel::Hex</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},812)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},812)</string>
       </property>
      </widget>
     </item>
@@ -241,7 +241,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},813)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},813)</string>
       </property>
      </widget>
     </item>
@@ -277,7 +277,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},130)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},130)</string>
       </property>
      </widget>
     </item>
@@ -313,7 +313,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},131)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},131)</string>
       </property>
      </widget>
     </item>
@@ -349,7 +349,7 @@
        <enum>PyDMLabel::Hex</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},132)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},132)</string>
       </property>
      </widget>
     </item>
@@ -385,7 +385,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},133)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},133)</string>
       </property>
      </widget>
     </item>
@@ -421,7 +421,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},134)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},134)</string>
       </property>
      </widget>
     </item>
@@ -457,7 +457,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},135)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},135)</string>
       </property>
      </widget>
     </item>
@@ -493,7 +493,7 @@
        <enum>PyDMLabel::Hex</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},136)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},136)</string>
       </property>
      </widget>
     </item>
@@ -529,7 +529,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},137)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},137)</string>
       </property>
      </widget>
     </item>
@@ -565,7 +565,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},138)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},138)</string>
       </property>
      </widget>
     </item>
@@ -601,7 +601,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},139)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},139)</string>
       </property>
      </widget>
     </item>
@@ -637,7 +637,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},141)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},141)</string>
       </property>
      </widget>
     </item>
@@ -673,7 +673,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},142)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},142)</string>
       </property>
      </widget>
     </item>
@@ -709,7 +709,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},143)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},143)</string>
       </property>
      </widget>
     </item>
@@ -745,7 +745,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},144)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},144)</string>
       </property>
      </widget>
     </item>
@@ -781,7 +781,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},145)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},145)</string>
       </property>
      </widget>
     </item>
@@ -817,7 +817,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},146)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},146)</string>
       </property>
      </widget>
     </item>
@@ -853,7 +853,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},152)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},152)</string>
       </property>
      </widget>
     </item>
@@ -889,7 +889,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},153)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},153)</string>
       </property>
      </widget>
     </item>
@@ -925,7 +925,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},154)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},154)</string>
       </property>
      </widget>
     </item>
@@ -961,7 +961,7 @@
        <enum>PyDMLabel::Hex</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},155)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},155)</string>
       </property>
      </widget>
     </item>
@@ -997,7 +997,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},109)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},109)</string>
       </property>
      </widget>
     </item>
@@ -1033,7 +1033,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},110)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},110)</string>
       </property>
      </widget>
     </item>
@@ -1069,7 +1069,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},111)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},111)</string>
       </property>
      </widget>
     </item>
@@ -1105,7 +1105,7 @@
        <enum>PyDMLabel::Hex</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},112)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},112)</string>
       </property>
      </widget>
     </item>
@@ -1141,7 +1141,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},177)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},177)</string>
       </property>
      </widget>
     </item>
@@ -1177,7 +1177,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},178)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},178)</string>
       </property>
      </widget>
     </item>
@@ -1213,7 +1213,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},179)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},179)</string>
       </property>
      </widget>
     </item>
@@ -1249,7 +1249,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},180)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},180)</string>
       </property>
      </widget>
     </item>
@@ -1285,7 +1285,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},182)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},182)</string>
       </property>
      </widget>
     </item>
@@ -1321,7 +1321,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},202)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},202)</string>
       </property>
      </widget>
     </item>
@@ -1357,7 +1357,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},203)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},203)</string>
       </property>
      </widget>
     </item>
@@ -1393,7 +1393,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},114)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},114)</string>
       </property>
      </widget>
     </item>
@@ -1429,7 +1429,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},115)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},115)</string>
       </property>
      </widget>
     </item>
@@ -1465,7 +1465,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},116)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},116)</string>
       </property>
      </widget>
     </item>
@@ -1501,7 +1501,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},106)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},106)</string>
       </property>
      </widget>
     </item>
@@ -1537,7 +1537,7 @@
        <enum>PyDMLabel::Hex</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},211)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},211)</string>
       </property>
      </widget>
     </item>
@@ -1573,7 +1573,7 @@
        <enum>PyDMLabel::Hex</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},212)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},212)</string>
       </property>
      </widget>
     </item>
@@ -1609,7 +1609,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},224)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},224)</string>
       </property>
      </widget>
     </item>
@@ -1645,7 +1645,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},225)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},225)</string>
       </property>
      </widget>
     </item>
@@ -1681,7 +1681,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},227)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},227)</string>
       </property>
      </widget>
     </item>
@@ -1717,7 +1717,7 @@
        <enum>PyDMLabel::Default</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${host}:${port}@${rate}/GETPARM(${axis},248)</string>
+       <string>ensemble://${host}:${port}/@${rate}/GETPARM(${axis},248)</string>
       </property>
      </widget>
     </item>

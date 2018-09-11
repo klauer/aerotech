@@ -84,7 +84,7 @@ parameter_template = '''
        <enum>PyDMLabel::{display_format}</enum>
       </property>
       <property name="channel" stdset="0">
-       <string>ensemble://${{host}}:${{port}}@${{rate}}/GETPARM(${{axis}},{number})</string>
+       <string>ensemble://${{host}}:${{port}}/@${{rate}}/GETPARM(${{axis}},{number})</string>
       </property>
      </widget>
     </item>

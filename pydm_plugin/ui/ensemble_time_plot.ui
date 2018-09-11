@@ -66,7 +66,7 @@
        </property>
        <property name="curves">
         <stringlist>
-         <string>{&quot;y_channel&quot;: &quot;ensemble://${host}:${port}@${rate}/IFBK(${axis})&quot;, &quot;x_channel&quot;: &quot;ensemble://${host}:${port}@${rate}/PFBKPROG(${axis})&quot;, &quot;name&quot;: &quot;Current vs Position&quot;, &quot;color&quot;: &quot;#fc0107&quot;, &quot;lineStyle&quot;: 2, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: &quot;x&quot;, &quot;symbolSize&quot;: 10, &quot;redraw_mode&quot;: 3, &quot;buffer_size&quot;: 1200}</string>
+         <string>{&quot;y_channel&quot;: &quot;ensemble://${host}:${port}/@${rate}/IFBK(${axis})&quot;, &quot;x_channel&quot;: &quot;ensemble://${host}:${port}/@${rate}/PFBKPROG(${axis})&quot;, &quot;name&quot;: &quot;Current vs Position&quot;, &quot;color&quot;: &quot;#fc0107&quot;, &quot;lineStyle&quot;: 2, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: &quot;x&quot;, &quot;symbolSize&quot;: 10, &quot;redraw_mode&quot;: 3, &quot;buffer_size&quot;: 1200}</string>
         </stringlist>
        </property>
       </widget>
@@ -93,8 +93,8 @@
        </property>
        <property name="curves">
         <stringlist>
-         <string>{&quot;channel&quot;: &quot;ensemble://${host}:${port}@${rate}/IFBK(${axis})&quot;, &quot;name&quot;: &quot;Current&quot;, &quot;color&quot;: &quot;white&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10}</string>
-         <string>{&quot;channel&quot;: &quot;ensemble://${host}:${port}@${rate}/PFBKPROG(${axis})&quot;, &quot;name&quot;: &quot;Position&quot;, &quot;color&quot;: &quot;dodgerblue&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10}</string>
+         <string>{&quot;channel&quot;: &quot;ensemble://${host}:${port}/@${rate}/IFBK(${axis})&quot;, &quot;name&quot;: &quot;Current&quot;, &quot;color&quot;: &quot;white&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10}</string>
+         <string>{&quot;channel&quot;: &quot;ensemble://${host}:${port}/@${rate}/PFBKPROG(${axis})&quot;, &quot;name&quot;: &quot;Position&quot;, &quot;color&quot;: &quot;dodgerblue&quot;, &quot;lineStyle&quot;: 1, &quot;lineWidth&quot;: 1, &quot;symbol&quot;: null, &quot;symbolSize&quot;: 10}</string>
         </stringlist>
        </property>
       </widget>
@@ -127,7 +127,7 @@
     </string>
        </property>
        <property name="channel" stdset="0">
-        <string>ensemble://${host}:${port}@${rate}/AXISSTATUS ${axis}</string>
+        <string>ensemble://${host}:${port}/@${rate}/AXISSTATUS ${axis}</string>
        </property>
        <property name="orientation" stdset="0">
         <enum>Qt::Vertical</enum>
@@ -204,7 +204,7 @@
     </string>
        </property>
        <property name="channel" stdset="0">
-        <string>ensemble://${host}:${port}@${rate}/AXISSTATUS ${axis}</string>
+        <string>ensemble://${host}:${port}/@${rate}/AXISSTATUS ${axis}</string>
        </property>
        <property name="orientation" stdset="0">
         <enum>Qt::Vertical</enum>
@@ -262,7 +262,7 @@
         <number>3</number>
        </property>
        <property name="channel" stdset="0">
-        <string>ensemble://${host}:${port}@${rate}/VFBK(${axis})</string>
+        <string>ensemble://${host}:${port}/@${rate}/VFBK(${axis})</string>
        </property>
       </widget>
      </item>
@@ -287,7 +287,7 @@
         <number>3</number>
        </property>
        <property name="channel" stdset="0">
-        <string>ensemble://${host}:${port}@${rate}/CMDPOS(${axis})</string>
+        <string>ensemble://${host}:${port}/@${rate}/CMDPOS(${axis})</string>
        </property>
       </widget>
      </item>
@@ -315,7 +315,7 @@
         <bool>true</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ensemble://${host}:${port}@${rate}/IFBK(${axis})</string>
+        <string>ensemble://${host}:${port}/@${rate}/IFBK(${axis})</string>
        </property>
       </widget>
      </item>
@@ -343,7 +343,7 @@
         <bool>true</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ensemble://${host}:${port}@${rate}/ICMD(${axis})</string>
+        <string>ensemble://${host}:${port}/@${rate}/ICMD(${axis})</string>
        </property>
       </widget>
      </item>
@@ -492,7 +492,7 @@
         <number>3</number>
        </property>
        <property name="channel" stdset="0">
-        <string>ensemble://${host}:${port}@${rate}/PFBKPROG(${axis})</string>
+        <string>ensemble://${host}:${port}/@${rate}/PFBKPROG(${axis})</string>
        </property>
       </widget>
      </item>
@@ -648,7 +648,7 @@
     </string>
        </property>
        <property name="channel" stdset="0">
-        <string>ensemble://${host}:${port}@${rate}/AXISSTATUS ${axis}</string>
+        <string>ensemble://${host}:${port}/@${rate}/AXISSTATUS ${axis}</string>
        </property>
        <property name="orientation" stdset="0">
         <enum>Qt::Horizontal</enum>

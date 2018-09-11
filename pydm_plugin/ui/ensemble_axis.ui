@@ -56,7 +56,7 @@
         <bool>true</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ensemble://${host}:${port}@${rate}/AIN(${axis},0)</string>
+        <string>ensemble://${host}:${port}/@${rate}/AIN(${axis},0)</string>
        </property>
       </widget>
      </item>
@@ -381,7 +381,7 @@
     </string>
        </property>
        <property name="channel" stdset="0">
-        <string>ensemble://${host}:${port}@${rate}/AXISSTATUS ${axis}</string>
+        <string>ensemble://${host}:${port}/@${rate}/AXISSTATUS ${axis}</string>
        </property>
        <property name="orientation" stdset="0">
         <enum>Qt::Horizontal</enum>
@@ -426,7 +426,7 @@
         <bool>true</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ensemble://${host}:${port}@${rate}/AIN(${axis},1)</string>
+        <string>ensemble://${host}:${port}/@${rate}/AIN(${axis},1)</string>
        </property>
       </widget>
      </item>
@@ -454,7 +454,7 @@
     </string>
        </property>
        <property name="channel" stdset="0">
-        <string>ensemble://${host}:${port}@${rate}/AXISSTATUS ${axis}</string>
+        <string>ensemble://${host}:${port}/@${rate}/AXISSTATUS ${axis}</string>
        </property>
        <property name="orientation" stdset="0">
         <enum>Qt::Vertical</enum>
@@ -515,7 +515,7 @@
         <bool>true</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ensemble://${host}:${port}@${rate}/IFBK(${axis})</string>
+        <string>ensemble://${host}:${port}/@${rate}/IFBK(${axis})</string>
        </property>
       </widget>
      </item>
@@ -540,7 +540,7 @@
         <number>3</number>
        </property>
        <property name="channel" stdset="0">
-        <string>ensemble://${host}:${port}@${rate}/PFBKPROG(${axis})</string>
+        <string>ensemble://${host}:${port}/@${rate}/PFBKPROG(${axis})</string>
        </property>
       </widget>
      </item>
@@ -581,7 +581,7 @@
         <number>3</number>
        </property>
        <property name="channel" stdset="0">
-        <string>ensemble://${host}:${port}@${rate}/CMDPOS(${axis})</string>
+        <string>ensemble://${host}:${port}/@${rate}/CMDPOS(${axis})</string>
        </property>
       </widget>
      </item>
@@ -609,7 +609,7 @@
         <bool>true</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ensemble://${host}:${port}@${rate}/ICMD(${axis})</string>
+        <string>ensemble://${host}:${port}/@${rate}/ICMD(${axis})</string>
        </property>
       </widget>
      </item>
@@ -650,7 +650,7 @@
         <number>3</number>
        </property>
        <property name="channel" stdset="0">
-        <string>ensemble://${host}:${port}@${rate}/VFBK(${axis})</string>
+        <string>ensemble://${host}:${port}/@${rate}/VFBK(${axis})</string>
        </property>
       </widget>
      </item>
@@ -678,7 +678,7 @@
     </string>
        </property>
        <property name="channel" stdset="0">
-        <string>ensemble://${host}:${port}@${rate}/AXISSTATUS ${axis}</string>
+        <string>ensemble://${host}:${port}/@${rate}/AXISSTATUS ${axis}</string>
        </property>
        <property name="orientation" stdset="0">
         <enum>Qt::Vertical</enum>
@@ -741,7 +741,7 @@
     </string>
            </property>
            <property name="channel" stdset="0">
-            <string>ensemble://${host}:${port}@${rate}/AXISSTATUS ${axis}</string>
+            <string>ensemble://${host}:${port}/@${rate}/AXISSTATUS ${axis}</string>
            </property>
            <property name="orientation" stdset="0">
             <enum>Qt::Vertical</enum>
@@ -801,7 +801,7 @@
     </string>
            </property>
            <property name="channel" stdset="0">
-            <string>ensemble://${host}:${port}@${rate}/AXISSTATUS ${axis}</string>
+            <string>ensemble://${host}:${port}/@${rate}/AXISSTATUS ${axis}</string>
            </property>
            <property name="orientation" stdset="0">
             <enum>Qt::Vertical</enum>
@@ -892,7 +892,7 @@
     </string>
            </property>
            <property name="channel" stdset="0">
-            <string>ensemble://${host}:${port}@${rate}/AXISFAULT ${axis}</string>
+            <string>ensemble://${host}:${port}/@${rate}/AXISFAULT ${axis}</string>
            </property>
            <property name="orientation" stdset="0">
             <enum>Qt::Vertical</enum>
@@ -952,7 +952,7 @@
     </string>
            </property>
            <property name="channel" stdset="0">
-            <string>ensemble://${host}:${port}@${rate}/AXISFAULT ${axis}</string>
+            <string>ensemble://${host}:${port}/@${rate}/AXISFAULT ${axis}</string>
            </property>
            <property name="orientation" stdset="0">
             <enum>Qt::Vertical</enum>
