@@ -215,28 +215,32 @@ class WriteOnlyParameter(QThread):
         self.to_write = []
 
     def run(self):
-        loop = self.client.loop
-        while self.to_write:
-            comm = self.client.comm
-            if comm is None:
-                logger.warning('Not writing %s; disconnected', self.parameter)
-                self.to_write.clear()
-                break
-
-            with self.client.lock:
-                value = self.to_write.pop(0)
-                cmd = self.parameter.format(value=value)
-                coro = comm.write_read(cmd)
-                try:
-                    result = loop.run_until_complete(coro)
-                except Exception as ex:
-                    logger.exception('Write failed: %r', cmd)
-                    self.new_severity_signal.emit(Severity.MAJOR)
+        try:
+            loop = self.client.loop
+            while self.to_write:
+                comm = self.client.comm
+                if comm is None:
+                    logger.warning('Not writing %s; disconnected',
+                                   self.parameter)
                     self.to_write.clear()
                     break
-                else:
-                    logger.info('Write result: %r => %s', cmd, result)
-                    self.new_severity_signal.emit(Severity.NO_ALARM)
+
+                with self.client.lock:
+                    value = self.to_write.pop(0)
+                    cmd = self.parameter.format(value=value)
+                    coro = comm.write_read(cmd)
+                    try:
+                        result = loop.run_until_complete(coro)
+                    except Exception as ex:
+                        logger.exception('Write failed: %r', cmd)
+                        self.new_severity_signal.emit(Severity.MAJOR)
+                        self.to_write.clear()
+                        break
+                    else:
+                        logger.info('Write result: %r => %s', cmd, result)
+                        self.new_severity_signal.emit(Severity.NO_ALARM)
+        except Exception:
+            logger.exception('Write failed!')
 
     def write(self, value):
         logger.debug('%s write: %s', self.parameter, value)
@@ -259,18 +263,19 @@ def is_write_only(parameter):
 
 
 def parse_address(addr):
-    'ensemble://<host>[:<port>][@poll_rate]/<parameter>'
+    'ensemble://<host>[:<port>][/@poll_rate]/<parameter>'
     host_info, _, parameter = addr.partition('/')
-
-    if '@' in host_info:
-        host_info, poll_rate = host_info.split('@', 1)
-    else:
-        poll_rate = 0.5
 
     if ':' in host_info:
         host, port = host_info.split(':')
     else:
         host, port = host_info, 8000
+
+    if parameter.startswith('@') and '/' in parameter:
+        poll_info, _, parameter = parameter.partition('/')
+        poll_rate = poll_info.lstrip('@')
+    else:
+        poll_rate = 0.5
 
     if parameter.startswith('TASKSTATE'):
         cls = PollThreadTaskState
@@ -291,11 +296,12 @@ def parse_address(addr):
 
 
 class AerotechConnection(PyDMConnection):
-    ADDRESS_FORMAT = "ensemble://<host>[:<port>][@poll_rate]/<parameter>"
+    ADDRESS_FORMAT = "ensemble://<host>[:<port>][/@poll_rate]/<parameter>"
 
     def __init__(self, channel, address, protocol=None, parent=None):
         super().__init__(channel, address, protocol, parent)
         self.app = QApplication.instance()
+        self._closed = False
 
         self.addr_info = parse_address(address)
         self.host = self.addr_info['host']
@@ -313,10 +319,6 @@ class AerotechConnection(PyDMConnection):
                                             Qt.QueuedConnection)
         self.poller.new_severity_signal.connect(self.emit_severity,
                                                 Qt.QueuedConnection)
-
-        if isinstance(self.poller, WriteOnlyParameter):
-            # TODO: necessary for pydmpushbutton
-            self.emit_data(0)
 
         self.metadata_timer = QTimer()
         self.metadata_timer.setInterval(1000)
@@ -354,6 +356,8 @@ class AerotechConnection(PyDMConnection):
     def put_value(self, new_val):
         if is_pydm_app() and self.app.is_read_only():
             return
+        elif self._closed:
+            return
 
         try:
             self.poller.write(new_val)
@@ -377,6 +381,8 @@ class AerotechConnection(PyDMConnection):
                 pass
 
     def remove_listener(self, channel):
+        super().remove_listener(channel)
+
         if channel.value_signal is None:
             return
 
@@ -386,9 +392,9 @@ class AerotechConnection(PyDMConnection):
             except (TypeError, KeyError):
                 pass
 
-        super().remove_listener(channel)
-
     def close(self):
+        super().close()
+        self._closed = True
         self.poller.requestInterruption()
         self.client.requestInterruption()
 
